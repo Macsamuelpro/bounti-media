@@ -1,0 +1,106 @@
+{
+ "last_run": "2026-11-05T03:07:00+01:00",
+ "pending": null,
+ "drops": [
+  {
+   "n": 1,
+   "date": "2026-11-05",
+   "due_at": "2026-11-05T15:17:00+01:00",
+   "buffer_post_id": "6aebe4b8bc551efdea38c2f4",
+   "villain": "barnaby-vane",
+   "kind": "reveal",
+   "bounty": 3000000,
+   "poster": "posters/2026-11-05-barnaby-vane-1.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 50
+   },
+   "verdict": null,
+   "result": null
+  }
+ ],
+ "villains": {
+  "barnaby-vane": {
+   "status": "wanted",
+   "bounty": 3000000,
+   "appearances": 1,
+   "lore_so_far": [
+    "Drop 1 (reveal): Bounti HQ's first ever bounty. As a boy he was a deckhand on a crew nobody remembers, and no one ever looked at him twice, so he bit a Curse Coin.",
+    "His Echo Coin turns one shout into ten thousand; every headline you could not scroll past and every 'YOU WON'T BELIEVE THIS' was his voice.",
+    "The price: he can never earn an honest coin again, so he sells noise. Last seen shouting from three harbours at once; his fleet is loud, cheap and very confident."
+   ]
+  },
+  "silas-kroft": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "morwenna-salt": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "roderick-krieger": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "orrin-blackwater": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "cassius-vale": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "halcyon-brine": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "enoch-thane": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "gideon-moor": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "ferran-ashcourt": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "mother-marrow": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "elias-thorne": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  },
+  "bartholomew-crane": {
+   "status": "unseen",
+   "bounty": null,
+   "appearances": 0,
+   "lore_so_far": []
+  }
+ }
+}
