@@ -1,0 +1,123 @@
+{
+ "barnaby-vane": {
+  "poster_name": "Barnaby Vane",
+  "full_name": "Captain Barnaby \"The Headline\" Vane",
+  "tier": 1,
+  "parallel": "Buggy",
+  "coin": "Echo Coin",
+  "start_bounty": 3000000,
+  "focus": 0.08
+ },
+ "silas-kroft": {
+  "poster_name": "Silas Kroft",
+  "full_name": "Silas Kroft, \"The Butler\"",
+  "tier": 1,
+  "parallel": "Captain Kuro",
+  "coin": "Vanish Coin",
+  "start_bounty": 16000000,
+  "focus": 0.06
+ },
+ "morwenna-salt": {
+  "poster_name": "Morwenna Salt",
+  "full_name": "Morwenna Salt, \"The Lure\"",
+  "tier": 1,
+  "parallel": "Alvida",
+  "coin": "Lure Coin",
+  "start_bounty": 5000000,
+  "focus": 0.03,
+  "zoom": 1.35,
+  "focus_x": 0.52
+ },
+ "roderick-krieger": {
+  "poster_name": "Roderick Krieger",
+  "full_name": "Admiral Roderick Krieger, \"Ten Thousand\"",
+  "tier": 1,
+  "parallel": "Don Krieg",
+  "coin": "Legion Coin",
+  "start_bounty": 17000000,
+  "focus": 0.03
+ },
+ "orrin-blackwater": {
+  "poster_name": "Orrin Blackwater",
+  "full_name": "Orrin Blackwater, \"The Drowned Saw\"",
+  "tier": 2,
+  "parallel": "Arlong",
+  "coin": "Tide Coin",
+  "start_bounty": 200000000,
+  "focus": 0.04
+ },
+ "cassius-vale": {
+  "poster_name": "Cassius Vale",
+  "full_name": "Don Cassius Vale, \"Mr. Zero\"",
+  "tier": 2,
+  "parallel": "Crocodile",
+  "coin": "Dust Coin",
+  "start_bounty": 810000000,
+  "focus": 0.05
+ },
+ "halcyon-brine": {
+  "poster_name": "Halcyon Brine",
+  "full_name": "Dr. Halcyon Brine",
+  "tier": 2,
+  "parallel": "Caesar Clown",
+  "coin": "Fog Coin",
+  "start_bounty": 300000000,
+  "focus": 0.0
+ },
+ "enoch-thane": {
+  "poster_name": "Enoch Thane",
+  "full_name": "Saint Enoch Thane, \"The Self-Made God\"",
+  "tier": 3,
+  "parallel": "Enel",
+  "coin": "Storm Coin",
+  "start_bounty": 1200000000,
+  "focus": 0.0
+ },
+ "gideon-moor": {
+  "poster_name": "Gideon Moor",
+  "full_name": "Gideon Moor, \"The Shadowkeeper\"",
+  "tier": 3,
+  "parallel": "Gecko Moria",
+  "coin": "Shade Coin",
+  "start_bounty": 1400000000,
+  "focus": 0.0
+ },
+ "ferran-ashcourt": {
+  "poster_name": "Ferran Ashcourt",
+  "full_name": "Lord Ferran Ashcourt, \"The Puppeteer\"",
+  "tier": 3,
+  "parallel": "Donquixote Doflamingo",
+  "coin": "String Coin",
+  "start_bounty": 3400000000,
+  "focus": 0.04
+ },
+ "mother-marrow": {
+  "poster_name": "Mother Marrow",
+  "full_name": "Mother Marrow, \"The Feast\"",
+  "tier": 4,
+  "parallel": "Big Mom (Charlotte Linlin)",
+  "coin": "Soul Coin",
+  "start_bounty": 4400000000,
+  "focus": 0.02,
+  "zoom": 1.45,
+  "focus_x": 0.55
+ },
+ "elias-thorne": {
+  "poster_name": "Elias Thorne",
+  "full_name": "Elias Thorne, \"The Unbreakable\"",
+  "tier": 4,
+  "parallel": "Kaido",
+  "coin": "Iron Coin",
+  "start_bounty": 4600000000,
+  "focus": 0.0
+ },
+ "bartholomew-crane": {
+  "poster_name": "Bartholomew Crane",
+  "full_name": "Bartholomew \"Black Ledger\" Crane, the Counterfeit King",
+  "tier": 5,
+  "parallel": "Marshall D. Teach (Blackbeard)",
+  "coin": "Two Curse Coins (Ledger Coin and Smoke Coin)",
+  "start_bounty": 3996000000,
+  "focus": 0.0
+ }
+}
