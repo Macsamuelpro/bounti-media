@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-07T07:55:00+01:00",
+ "last_run": "2026-11-08T07:55:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -16,6 +16,24 @@
     "target": 50
    },
    "verdict": null,
+   "result": null,
+   "verdict_note": "2026-11-08 07:54 WAT check: 64h old, 0 likes of 50 (1 reply, metrics updated 2026-11-07 12:44Z). Not met, under 72h: verdict waits for next run."
+  },
+  {
+   "n": 2,
+   "date": "2026-11-08",
+   "due_at": "2026-11-08T15:43:00+01:00",
+   "buffer_post_id": "6af01cb4d6bbae6fa1d0dae7",
+   "villain": "silas-kroft",
+   "kind": "reveal",
+   "bounty": 16000000,
+   "poster": "posters/2026-11-08-silas-kroft-1.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 40
+   },
+   "required_basis": "Only 1 prior drop with no verdict yet, treated as no history: Tier 1 base 50 likes x0.8 = 40.",
+   "verdict": null,
    "result": null
   }
  ],
@@ -31,10 +49,14 @@
    ]
   },
   "silas-kroft": {
-   "status": "unseen",
-   "bounty": null,
-   "appearances": 0,
-   "lore_so_far": []
+   "status": "wanted",
+   "bounty": 16000000,
+   "appearances": 1,
+   "lore_so_far": [
+    "Drop 2 (reveal): for three years he ran the friendliest earning circle on the Open Sea, answered every question, welcomed every new hunter by name, and politely collected a small 'membership fee' from each. Nobody asked where the fees went.",
+    "One morning the circle woke up to nothing: no messages, no records, no admin. His Vanish Coin makes anything he wants gone disappear, and he made all of it vanish, himself included.",
+    "Last seen pushing his glasses up with one long nail, saying 'Right on schedule.' He cannot stand a plan that goes off script."
+   ]
   },
   "morwenna-salt": {
    "status": "unseen",
