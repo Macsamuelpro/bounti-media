@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-08T07:55:00+01:00",
+ "last_run": "2026-11-09T07:56:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -15,9 +15,17 @@
     "metric": "likes",
     "target": 50
    },
-   "verdict": null,
-   "result": null,
-   "verdict_note": "2026-11-08 07:54 WAT check: 64h old, 0 likes of 50 (1 reply, metrics updated 2026-11-07 12:44Z). Not met, under 72h: verdict waits for next run."
+   "verdict": "escaped",
+   "result": {
+    "metric": "likes",
+    "value": 0,
+    "target": 50,
+    "replies": 1,
+    "reposts": 0,
+    "impressions": 3,
+    "metrics_updated_at": "2026-11-08T11:44:31Z"
+   },
+   "verdict_note": "2026-11-08 07:54 WAT check: 64h old, 0 likes of 50 (1 reply, metrics updated 2026-11-07 12:44Z). Not met, under 72h: verdict waits for next run. 2026-11-09 07:55 WAT check: about 89h old, 0 likes of 50 (1 reply, 0 reposts, 3 impressions, metrics updated 2026-11-08 11:44Z). Not met and over 72h: ESCAPED. Verdict not yet posted; announce it with the ESCAPED stamp on 3,000,000 AURA in a future drop, and he returns 2 to 4 drops after drop 2 with the bounty raised 1.5 to 2x."
   },
   {
    "n": 2,
@@ -39,7 +47,7 @@
  ],
  "villains": {
   "barnaby-vane": {
-   "status": "wanted",
+   "status": "escaped",
    "bounty": 3000000,
    "appearances": 1,
    "lore_so_far": [
