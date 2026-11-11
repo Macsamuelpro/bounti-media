@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-09T07:56:00+01:00",
+ "last_run": "2026-11-11T07:55:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -42,6 +42,24 @@
    },
    "required_basis": "Only 1 prior drop with no verdict yet, treated as no history: Tier 1 base 50 likes x0.8 = 40.",
    "verdict": null,
+   "result": null,
+   "verdict_note": "2026-11-11 07:54 WAT check: about 64h old, 0 likes of 40 (1 reply, 0 reposts, 2 impressions, metrics updated 2026-11-10 09:44Z). Not met, under 72h: verdict waits for next run."
+  },
+  {
+   "n": 3,
+   "date": "2026-11-11",
+   "due_at": "2026-11-11T14:52:00+01:00",
+   "buffer_post_id": "6af41153095081ea08bed88f",
+   "villain": "morwenna-salt",
+   "kind": "reveal",
+   "bounty": 5000000,
+   "poster": "posters/2026-11-11-morwenna-salt-1.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 30
+   },
+   "required_basis": "Real like history is 0 (drop 1 escaped at 0, drop 2 at 0 and trending to escape), so the median gives no usable target. Eased off from the Tier 1 no-history base (50 x0.8 = 40) to 30.",
+   "verdict": null,
    "result": null
   }
  ],
@@ -67,10 +85,14 @@
    ]
   },
   "morwenna-salt": {
-   "status": "unseen",
-   "bounty": null,
-   "appearances": 0,
-   "lore_so_far": []
+   "status": "wanted",
+   "bounty": 5000000,
+   "appearances": 1,
+   "lore_so_far": [
+    "Drop 3 (reveal): her empire is a glittering ship with a thousand doors, out past the busy harbours. Every door is an invitation: free gifts, secret drops, 'You've been selected.' Hunters who step through never come back; their crews just stop hearing from them.",
+    "Her Lure Coin makes anything she sends look irresistible. Last week a whole crew followed one shiny invite to 'claim their spot'; nobody has seen them since, and the spots were never real.",
+    "Rumoured backstory: once the plainest girl on her island, laughed out of every room. She bit the coin so no one would ever look past her again. Her weakness is being ignored."
+   ]
   },
   "roderick-krieger": {
    "status": "unseen",
