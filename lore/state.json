@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-11T07:55:00+01:00",
+ "last_run": "2026-11-13T07:55:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -41,9 +41,17 @@
     "target": 40
    },
    "required_basis": "Only 1 prior drop with no verdict yet, treated as no history: Tier 1 base 50 likes x0.8 = 40.",
-   "verdict": null,
-   "result": null,
-   "verdict_note": "2026-11-11 07:54 WAT check: about 64h old, 0 likes of 40 (1 reply, 0 reposts, 2 impressions, metrics updated 2026-11-10 09:44Z). Not met, under 72h: verdict waits for next run."
+   "verdict": "escaped",
+   "result": {
+    "metric": "likes",
+    "value": 0,
+    "target": 40,
+    "replies": 1,
+    "reposts": 0,
+    "impressions": 3,
+    "metrics_updated_at": "2026-11-13T06:45:21Z"
+   },
+   "verdict_note": "2026-11-11 07:54 WAT check: about 64h old, 0 likes of 40 (1 reply, 0 reposts, 2 impressions, metrics updated 2026-11-10 09:44Z). Not met, under 72h: verdict waits for next run. 2026-11-13 07:54 WAT check: about 112h old, 0 likes of 40 (1 reply, 0 reposts, 3 impressions, metrics updated 2026-11-13 06:45Z). Not met and over 72h: ESCAPED. Verdict not yet posted with a stamp; announce it with the ESCAPED stamp on 16,000,000 AURA in a future drop, and he returns 2 to 4 drops after drop 2 with the bounty raised 1.5 to 2x (within Tier 1 range)."
   },
   {
    "n": 3,
@@ -60,7 +68,26 @@
    },
    "required_basis": "Real like history is 0 (drop 1 escaped at 0, drop 2 at 0 and trending to escape), so the median gives no usable target. Eased off from the Tier 1 no-history base (50 x0.8 = 40) to 30.",
    "verdict": null,
-   "result": null
+   "result": null,
+   "verdict_note": "2026-11-13 07:54 WAT check: about 41h old (under 48h), 0 likes of 30 (1 reply, 0 reposts, 1 impression, metrics updated 2026-11-13 06:45Z). Verdict waits for a later run."
+  },
+  {
+   "n": 4,
+   "date": "2026-11-13",
+   "due_at": "2026-11-13T15:37:00+01:00",
+   "buffer_post_id": "6af6b473c1a0010a5b03ce9f",
+   "villain": "roderick-krieger",
+   "kind": "reveal",
+   "bounty": 17000000,
+   "poster": "posters/2026-11-13-roderick-krieger-1.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 20
+   },
+   "required_basis": "Like history is 0 on every drop so far (median 0) and both verdicts so far escaped, so eased off again from 30 to 20 likes (Tier 1). Replies not used: each post shows 1 comment, which looks like the thread's own follow-up tweet, so it is not a real signal.",
+   "verdict": null,
+   "result": null,
+   "drop_day_note": "Gap of 2 days after drop 3 (gaps so far 3, 3). Friday chosen over Saturday (avoid) to vary rhythm. Single drop: 4th of the first four in order. Next candidates: Barnaby Vane return (escaped drop 1, due within drops 3 to 5, so drop 5 at the latest) with ESCAPED news, and Silas Kroft return (drops 4 to 6 after drop 2)."
   }
  ],
  "villains": {
@@ -75,7 +102,7 @@
    ]
   },
   "silas-kroft": {
-   "status": "wanted",
+   "status": "escaped",
    "bounty": 16000000,
    "appearances": 1,
    "lore_so_far": [
@@ -95,10 +122,14 @@
    ]
   },
   "roderick-krieger": {
-   "status": "unseen",
-   "bounty": null,
-   "appearances": 0,
-   "lore_so_far": []
+   "status": "wanted",
+   "bounty": 17000000,
+   "appearances": 1,
+   "lore_so_far": [
+    "Drop 4 (reveal): the biggest armada on the Open Sea, ten thousand ships, every deck cheering his name at once, every flag the same flag. Whole harbours give up on sight. The cheering never changes, not even by one word.",
+    "His Legion Coin splits him into thousands of empty copies that follow, cheer and swarm on command. Last week one copy limped into a quiet harbour, starving, begging for a single meal; the locals fed him, and by sunrise ten thousand more had docked.",
+    "Backstory as told: he once sailed to the far seas with a real fleet and a real war to win, lost all of it and came home with nothing but his pride, so he built an army that can never desert him (and can never truly fight for him). Weakness: one real fighter; test a single copy and the rest scatter. Threat on record: miss the target and Ten Thousand becomes twenty."
+   ]
   },
   "orrin-blackwater": {
    "status": "unseen",
