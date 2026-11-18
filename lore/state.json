@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-13T07:55:00+01:00",
+ "last_run": "2026-11-18T07:54:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -67,9 +67,17 @@
     "target": 30
    },
    "required_basis": "Real like history is 0 (drop 1 escaped at 0, drop 2 at 0 and trending to escape), so the median gives no usable target. Eased off from the Tier 1 no-history base (50 x0.8 = 40) to 30.",
-   "verdict": null,
-   "result": null,
-   "verdict_note": "2026-11-13 07:54 WAT check: about 41h old (under 48h), 0 likes of 30 (1 reply, 0 reposts, 1 impression, metrics updated 2026-11-13 06:45Z). Verdict waits for a later run."
+   "verdict": "escaped",
+   "result": {
+    "metric": "likes",
+    "value": 0,
+    "target": 30,
+    "replies": 1,
+    "reposts": 0,
+    "impressions": 2,
+    "metrics_updated_at": "2026-11-18T01:46:11Z"
+   },
+   "verdict_note": "2026-11-13 07:54 WAT check: about 41h old (under 48h), 0 likes of 30 (1 reply, 0 reposts, 1 impression, metrics updated 2026-11-13 06:45Z). Verdict waits for a later run. 2026-11-18 07:54 WAT check: about 161h old, 0 likes of 30 (1 reply, 0 reposts, 2 impressions, metrics updated 2026-11-18 01:46Z). Not met and over 72h: ESCAPED. Escape mentioned in drop 5's story; no ESCAPED-stamp poster yet. She returns 2 to 4 drops after drop 3 (drops 5 to 7) with the bounty raised 1.5 to 2x."
   },
   {
    "n": 4,
@@ -85,20 +93,50 @@
     "target": 20
    },
    "required_basis": "Like history is 0 on every drop so far (median 0) and both verdicts so far escaped, so eased off again from 30 to 20 likes (Tier 1). Replies not used: each post shows 1 comment, which looks like the thread's own follow-up tweet, so it is not a real signal.",
+   "verdict": "escaped",
+   "result": {
+    "metric": "likes",
+    "value": 0,
+    "target": 20,
+    "replies": 1,
+    "reposts": 0,
+    "impressions": 3,
+    "metrics_updated_at": "2026-11-18T01:46:11Z"
+   },
+   "drop_day_note": "Gap of 2 days after drop 3 (gaps so far 3, 3). Friday chosen over Saturday (avoid) to vary rhythm. Single drop: 4th of the first four in order. Next candidates: Barnaby Vane return (escaped drop 1, due within drops 3 to 5, so drop 5 at the latest) with ESCAPED news, and Silas Kroft return (drops 4 to 6 after drop 2).",
+   "verdict_note": "2026-11-18 07:54 WAT check: about 112h old, 0 likes of 20 (1 reply, 0 reposts, 3 impressions, metrics updated 2026-11-18 01:46Z). Not met and over 72h: ESCAPED. Per his own threat, Ten Thousand became twenty thousand (stated in drop 5). Returns 2 to 4 drops after drop 4 (drops 6 to 8) with the bounty raised 1.5 to 2x."
+  },
+  {
+   "n": 5,
+   "date": "2026-11-18",
+   "due_at": "2026-11-18T14:47:00+01:00",
+   "buffer_post_id": "6afd4bf5739d5342ff0e4fdf",
+   "villain": "barnaby-vane",
+   "kind": "return",
+   "bounty": 5500000,
+   "poster": "posters/2026-11-18-barnaby-vane-2.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 25
+   },
+   "required_basis": "Median likes over all 4 drops is 0 and all 4 escaped, so the ease-off rule applies. Return rule asks for about x1.3 his last target (50 -> 65), which is unreachable on current numbers; chose 25 likes, slightly above the last drop's 20. Kept likes: replies stay at 1 on every post (likely the thread's own reply), reposts are 0 everywhere.",
    "verdict": null,
    "result": null,
-   "drop_day_note": "Gap of 2 days after drop 3 (gaps so far 3, 3). Friday chosen over Saturday (avoid) to vary rhythm. Single drop: 4th of the first four in order. Next candidates: Barnaby Vane return (escaped drop 1, due within drops 3 to 5, so drop 5 at the latest) with ESCAPED news, and Silas Kroft return (drops 4 to 6 after drop 2)."
+   "drop_day_note": "Gap of 5 days after drop 4 (one day over the 2 to 4 range because no run happened between 2026-11-13 and 2026-11-18). Wednesday, afternoon window, 14:47 WAT; the only other scheduled @earnbounti post is 08:11 WAT today (over 6h apart). Single drop: Barnaby was due back by drop 5 at the latest. Bounty 3,000,000 -> 5,500,000 (x1.83). His ESCAPED news is in tweet 1; Silas, Morwenna and Krieger escapes are told in the story. Tier 2 is now open (all four Tier 1 villains have verdicts). Next: Silas Kroft return (due by drop 6), Morwenna return (drops 5 to 7), Krieger return (drops 6 to 8); a first Tier 2 reveal or a double could fit soon."
   }
  ],
  "villains": {
   "barnaby-vane": {
-   "status": "escaped",
-   "bounty": 3000000,
-   "appearances": 1,
+   "status": "wanted",
+   "bounty": 5500000,
+   "appearances": 2,
    "lore_so_far": [
     "Drop 1 (reveal): Bounti HQ's first ever bounty. As a boy he was a deckhand on a crew nobody remembers, and no one ever looked at him twice, so he bit a Curse Coin.",
     "His Echo Coin turns one shout into ten thousand; every headline you could not scroll past and every 'YOU WON'T BELIEVE THIS' was his voice.",
-    "The price: he can never earn an honest coin again, so he sells noise. Last seen shouting from three harbours at once; his fleet is loud, cheap and very confident."
+    "The price: he can never earn an honest coin again, so he sells noise. Last seen shouting from three harbours at once; his fleet is loud, cheap and very confident.",
+    "Drop 5 (return): when nobody answered his first poster he shrank (silence does that to him), got small enough to slip through the net, and hid under a pier for a week.",
+    "Four escapes in one week (him, the Butler, the Lure, Ten Thousand); every rumour on the docks ended with his name. He planned none of it and is taking the credit anyway: his Echo Coin shouts 'THE MASTERMIND RETURNS.' from every harbour. Small Fry have started saluting him and a few bigger ships are listening.",
+    "Bounty raised to 5,500,000 AURA 'for a plan he never made'. Bounti HQ says ignoring him only makes him shrink and slip away, so this time the hunters go loud: hit the target and the net closes mid-shout; miss it and the rumour comes true."
    ]
   },
   "silas-kroft": {
@@ -108,27 +146,30 @@
    "lore_so_far": [
     "Drop 2 (reveal): for three years he ran the friendliest earning circle on the Open Sea, answered every question, welcomed every new hunter by name, and politely collected a small 'membership fee' from each. Nobody asked where the fees went.",
     "One morning the circle woke up to nothing: no messages, no records, no admin. His Vanish Coin makes anything he wants gone disappear, and he made all of it vanish, himself included.",
-    "Last seen pushing his glasses up with one long nail, saying 'Right on schedule.' He cannot stand a plan that goes off script."
+    "Last seen pushing his glasses up with one long nail, saying 'Right on schedule.' He cannot stand a plan that goes off script.",
+    "Drop 5 (Barnaby's story): his escape is told as 'the Butler vanished'."
    ]
   },
   "morwenna-salt": {
-   "status": "wanted",
+   "status": "escaped",
    "bounty": 5000000,
    "appearances": 1,
    "lore_so_far": [
     "Drop 3 (reveal): her empire is a glittering ship with a thousand doors, out past the busy harbours. Every door is an invitation: free gifts, secret drops, 'You've been selected.' Hunters who step through never come back; their crews just stop hearing from them.",
     "Her Lure Coin makes anything she sends look irresistible. Last week a whole crew followed one shiny invite to 'claim their spot'; nobody has seen them since, and the spots were never real.",
-    "Rumoured backstory: once the plainest girl on her island, laughed out of every room. She bit the coin so no one would ever look past her again. Her weakness is being ignored."
+    "Rumoured backstory: once the plainest girl on her island, laughed out of every room. She bit the coin so no one would ever look past her again. Her weakness is being ignored.",
+    "Verdict: ESCAPED (0 of 30 likes). Drop 5 (Barnaby's story): 'The Lure sailed off.'"
    ]
   },
   "roderick-krieger": {
-   "status": "wanted",
+   "status": "escaped",
    "bounty": 17000000,
    "appearances": 1,
    "lore_so_far": [
     "Drop 4 (reveal): the biggest armada on the Open Sea, ten thousand ships, every deck cheering his name at once, every flag the same flag. Whole harbours give up on sight. The cheering never changes, not even by one word.",
     "His Legion Coin splits him into thousands of empty copies that follow, cheer and swarm on command. Last week one copy limped into a quiet harbour, starving, begging for a single meal; the locals fed him, and by sunrise ten thousand more had docked.",
-    "Backstory as told: he once sailed to the far seas with a real fleet and a real war to win, lost all of it and came home with nothing but his pride, so he built an army that can never desert him (and can never truly fight for him). Weakness: one real fighter; test a single copy and the rest scatter. Threat on record: miss the target and Ten Thousand becomes twenty."
+    "Backstory as told: he once sailed to the far seas with a real fleet and a real war to win, lost all of it and came home with nothing but his pride, so he built an army that can never desert him (and can never truly fight for him). Weakness: one real fighter; test a single copy and the rest scatter. Threat on record: miss the target and Ten Thousand becomes twenty.",
+    "Verdict: ESCAPED (0 of 20 likes). Drop 5 (Barnaby's story): 'Ten Thousand became twenty thousand and marched away.' His armada now counts twenty thousand."
    ]
   },
   "orrin-blackwater": {
