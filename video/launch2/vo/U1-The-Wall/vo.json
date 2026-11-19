@@ -1,0 +1,51 @@
+[
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l00.wav",
+  "dur": 3.007416666666667,
+  "text": "[curious] Your users already chase coins, gems and points.",
+  "heard": "Your users already chase coins, gems and points.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l01.wav",
+  "dur": 3.4859166666666668,
+  "text": "[thoughtful] So... what if every one of those rewards earned you money?",
+  "heard": "So, what if every one of those rewards earned you money?",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l02.wav",
+  "dur": 5.874083333333333,
+  "text": "[confident] Meet the Bounti wall. It opens right inside your app, your site or your game.",
+  "heard": "Meet the Bounty Wall. It opens right inside your app, your site, or your game.",
+  "match": 0.93
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l03.wav",
+  "dur": 7.239041666666667,
+  "text": "Your users complete real bounties and collect your reward, in your currency. They never leave your app.",
+  "heard": "your users complete real bounties and collect your reward in your currency. They never leave your app.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l04.wav",
+  "dur": 3.4289583333333336,
+  "text": "And Bounti pays you for every bounty they complete.",
+  "heard": "and bounty pays you for every bounty they complete.",
+  "match": 0.89
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l05.wav",
+  "dur": 2.392875,
+  "text": "[calm] Your users stay. You earn.",
+  "heard": "Your users stay. You earn.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U1-The-Wall/l06.wav",
+  "dur": 4.113208333333334,
+  "text": "Bounti for publishers. Partners dot earnbounti dot com.",
+  "heard": "Bounty for Publishers. Partners.urnbounty.com.",
+  "match": 0.36
+ }
+]

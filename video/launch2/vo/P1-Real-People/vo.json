@@ -1,0 +1,58 @@
+[
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l00.wav",
+  "dur": 2.88,
+  "text": "[sarcastic] Fifty thousand people saw your ad. Lovely.",
+  "heard": "50,000 people saw your ad. Lovely.",
+  "match": 0.83
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l01.wav",
+  "dur": 2.72,
+  "text": "[thoughtful] So... how many of them actually did anything?",
+  "heard": "So, how many of them actually did anything?",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l02.wav",
+  "dur": 8.216916666666666,
+  "text": "[confident] Bounti Partners puts real people behind your brand. Follows, sign-ups, installs, visits. You choose the action.",
+  "heard": "Bounty Partners puts real people behind your brand. Follows, signups, installs, visits. You choose the action.",
+  "match": 0.94
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l03.wav",
+  "dur": 3.1715833333333334,
+  "text": "Add your link, choose who takes part, and go live.",
+  "heard": "Add your link, choose who takes part and go live.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l04.wav",
+  "dur": 3.9665416666666666,
+  "text": "Every action is checked. If it doesn't pass, you're not charged.",
+  "heard": "Every action is checked. If it doesn't pass, you're not charged.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l05.wav",
+  "dur": 4.651375,
+  "text": "And if a follow drops off within thirty days, we replace it. Free.",
+  "heard": "And if a follow drops off within 30 days, we replace it. Free.",
+  "match": 0.96
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l06.wav",
+  "dur": 3.44,
+  "text": "[calm] Real people. Real actions. Real growth.",
+  "heard": "Real people, real actions, real growth.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P1-Real-People/l07.wav",
+  "dur": 4.1429583333333335,
+  "text": "Bounti Partners. Start at partners dot earnbounti dot com.",
+  "heard": "Bounty Partners. Start at partners.earnbounty.com.",
+  "match": 0.46
+ }
+]

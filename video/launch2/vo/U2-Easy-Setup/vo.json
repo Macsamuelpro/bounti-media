@@ -1,0 +1,51 @@
+[
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l00.wav",
+  "dur": 4.712958333333333,
+  "text": "[sarcastic] Integrations are always quick and painless. Said nobody. Ever.",
+  "heard": "integrations are always quick and painless. Said nobody, ever.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l01.wav",
+  "dur": 1.4429166666666666,
+  "text": "[calm] This one actually is.",
+  "heard": "This one actually is.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l02.wav",
+  "dur": 6.388083333333333,
+  "text": "Name your app, and choose what your users earn. Coins, gems, points. Your call.",
+  "heard": "Name your app and choose what your users earn. Coins, gems, points, your call.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l03.wav",
+  "dur": 3.76,
+  "text": "Use our ready-made wall, or build your own screens on the API.",
+  "heard": "Use our ready-made wall or build your own screens on the API.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l04.wav",
+  "dur": 2.6714583333333333,
+  "text": "Open one link inside your app, and you're set.",
+  "heard": "Open one link inside your app and your set.",
+  "match": 0.89
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l05.wav",
+  "dur": 3.4494166666666666,
+  "text": "[warm] Your users earn. You earn. Every time.",
+  "heard": "Your users earn, you earn, every time.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/U2-Easy-Setup/l06.wav",
+  "dur": 3.9997083333333334,
+  "text": "Bounti for publishers. Partners dot earnbounti dot com.",
+  "heard": "Bounty for Publishers. Partners.urnbounty.com",
+  "match": 0.36
+ }
+]

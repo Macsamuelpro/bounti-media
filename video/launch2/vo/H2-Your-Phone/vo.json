@@ -1,0 +1,58 @@
+[
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l00.wav",
+  "dur": 0.886375,
+  "text": "[whispers] Quick question.",
+  "heard": "Quick question.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l01.wav",
+  "dur": 2.4997083333333334,
+  "text": "[curious] How much did your phone pay you last month?",
+  "heard": "How much did your phone pay you last month?",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l02.wav",
+  "dur": 2.7351666666666667,
+  "text": "[sighs] Yeah. That's what I thought.",
+  "heard": "Yeah, that's what I thought.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l03.wav",
+  "dur": 7.14025,
+  "text": "[upbeat] Bounti turns your scroll into rewards. Swipe through bounties picked for you, and claim them in seconds.",
+  "heard": "Bounty turns your scroll into rewards. Swipe through bounties picked for you and claim them in seconds.",
+  "match": 0.94
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l04.wav",
+  "dur": 6.85225,
+  "text": "Want bigger ones? Missions. Install, sign up, level up, then get paid.",
+  "heard": "Want bigger ones? Missions. Install, sign up, level up, then get paid.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l05.wav",
+  "dur": 5.572291666666667,
+  "text": "Then bring your crew. Hit your daily target together, and keep the streak alive.",
+  "heard": "Then bring your crew. Hit your daily target together and keep the streak alive.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l06.wav",
+  "dur": 2.1710416666666665,
+  "text": "[confident] Your phone. Real money.",
+  "heard": "your phone. Real money.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H2-Your-Phone/l07.wav",
+  "dur": 4.671958333333333,
+  "text": "Bounti. Start today, at earnbounti dot com.",
+  "heard": "Bounty. Start today at earnbounty.com",
+  "match": 0.6
+ }
+]

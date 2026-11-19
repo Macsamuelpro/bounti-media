@@ -1,0 +1,58 @@
+[
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l00.wav",
+  "dur": 3.9611666666666667,
+  "text": "[sarcastic] Oh, great. Another app that pays you to tap your phone.",
+  "heard": "Oh great, another app that pays you to tap your phone.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l01.wav",
+  "dur": 5.092208333333334,
+  "text": "[thoughtful] Except... this one actually checks the work. And actually pays.",
+  "heard": "except this one actually checks the work and actually pays.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l02.wav",
+  "dur": 1.481875,
+  "text": "[confident] This is Bounti.",
+  "heard": "This is Bounty.",
+  "match": 0.67
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l03.wav",
+  "dur": 9.04,
+  "text": "Follow a brand. Watch a video. Join a community. The small things you already do, now with a reward on every single one.",
+  "heard": "Follow a brand, watch a video, join a community. The small things you already do now with a reward on every single one.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l04.wav",
+  "dur": 7.537125,
+  "text": "Every bounty tells you exactly what to do. You do it, we check it, and your reward lands in your wallet.",
+  "heard": "Every bounty tells you exactly what to do. You do it, we check it, and your reward lands in your wallet.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l05.wav",
+  "dur": 3.5886666666666667,
+  "text": "[calm] No deposits. No bets. Nothing to buy. Ever.",
+  "heard": "No deposits, no bets, nothing to buy, ever.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l06.wav",
+  "dur": 3.39425,
+  "text": "[warm] And when you are ready, you cash out. Simple as that.",
+  "heard": "And when you are ready, you cash out. Simple as that.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/H1-No-Catch/l07.wav",
+  "dur": 6.334958333333334,
+  "text": "[excited] Bounti. Simple tasks. Real rewards. Get on it, at earnbounti dot com.",
+  "heard": "Bounty. Simple tasks. Real rewards. Get on it at earnbounty.com",
+  "match": 0.76
+ }
+]

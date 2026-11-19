@@ -1,0 +1,51 @@
+[
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l00.wav",
+  "dur": 2.621541666666667,
+  "text": "[curious] What if you only paid for what actually happened?",
+  "heard": "What if you only paid for what actually happened?",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l01.wav",
+  "dur": 3.6784583333333334,
+  "text": "[firm] Not impressions. Not reach. Actions.",
+  "heard": "Not impressions, not reach. Actions.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l02.wav",
+  "dur": 8.354625,
+  "text": "Engagement, community, traffic, leads, app growth and conversions, all from one place.",
+  "heard": "engagement, community, traffic, leads, app growth, and conversions, all from one place.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l03.wav",
+  "dur": 5.631583333333333,
+  "text": "Bounti puts your campaign in front of real people, checks every action, and shows you the lift.",
+  "heard": "Bounty puts your campaign in front of real people, checks every action and shows you the lift.",
+  "match": 0.94
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l04.wav",
+  "dur": 3.04,
+  "text": "One clear price per action, with nothing hidden.",
+  "heard": "one clear price per action with nothing hidden.",
+  "match": 1.0
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l05.wav",
+  "dur": 2.4226666666666667,
+  "text": "[confident] Get real business growth with Bounti.",
+  "heard": "get real business growth with bounty.",
+  "match": 0.83
+ },
+ {
+  "file": "/tmp/claude-0/-home-user-Bounti/62af7c5f-52be-5258-8396-28d81e625d88/scratchpad/launch2/vo/P2-Pay-For-Results/l06.wav",
+  "dur": 2.5824166666666666,
+  "text": "Partners dot earnbounti dot com.",
+  "heard": "partners.urnbounty.com.",
+  "match": 0.0
+ }
+]
