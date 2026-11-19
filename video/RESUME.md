@@ -12,7 +12,7 @@ and `node drec.js d_landing|d_feed|d_missions`; copy rec/<name>.mp4 (yuv420p) + 
 - Bounti-Crowd-Shorts.zip (6 shorts, 1:00 to 1:05), Bounti-UGC-11-Videos.zip (v1, Mac wants a full redo, see below),
   Bounti-Launch-Videos.zip (v1, Mac rejected: generic voice/visuals).
 
-## STEP 1 (in progress when paused): launch films v2
+## STEP 1: launch films v2 (resumed 06:01 WAT; H1, P1, U1, H2, P2 done; U2 V/H rendering)
 - Done (in S/final/launch2): H1-No-Catch 9x16+16x9, P1-Real-People 9x16+16x9, U1-The-Wall 9x16+16x9.
 - Remaining: H2-Your-Phone V/H, P2-Pay-For-Results V/H, U2-Easy-Setup V/H. Exact command (run in background, timeout 2h):
   cd S/launch2 && for j in H2-Your-Phone:V P2-Pay-For-Results:V U2-Easy-Setup:V H2-Your-Phone:H P2-Pay-For-Results:H U2-Easy-Setup:H; do ../venv/bin/python film.py ${j%:*} ${j#*:}; done
@@ -37,6 +37,8 @@ recordings (S/ugc/live) for app moments, matched to the line, few inserts. Plan 
 | UGC12 | GREEN SCREEN B: floating angled device backdrop (3D), presenter torso centred low, zooms into the backdrop | |
 | UGC13 | casual handheld shake, message-bubble hooks beside the face, link-card bubble that expands into the app | |
 Then render each, QA (faces never covered, loudness two-pass -14), zip Bounti-UGC-v2.zip.
+BUILT: S/ugc_render2.py (exec's ugc_v2_frames.py; styles in ugc_styles2.py; dev3d.py for 3D phones). Previews checked for all 11.
+Render queue: S/ugc_chain2.sh (waits for film.py, renders final/ugc2, two-pass loudness into final/ugc2_lv). Log: S/ugc/chain_v2.log
 
 ## STEP 3: send ALL zip files together, in a row (Mac's request): launch films v2 zip, UGC v2 zip.
 Also back up every edit to this repo (no file over 50 MB) and keep skills/bounti-video-editor updated.
