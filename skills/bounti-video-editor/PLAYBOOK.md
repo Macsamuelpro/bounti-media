@@ -59,3 +59,13 @@ Rules learned from Mac's feedback across five edits and from 13 reference videos
 - Short cut-downs must be at least 1:00 (and at most 1:45): extend with whole lines that continue the story, not filler.
 - Learn Mac's L8 podcast-card style (Style D in SKILL.md).
 - Back up every edit to github Macsamuelpro/bounti-media, always.
+
+## 2026-11-19 later (Mac)
+- Every UGC in a batch gets a different editing style, pattern, music bed and caption look (see SKILL.md style table / pipeline/ugc_v2_frames.py).
+- Hooks and captions never on a face: place text with face boxes (models/yunet.onnx) in face-free zones.
+- Only the videos whose notes ask for it are green screen (here 2), each in a different format, presenter framed torso-only (scale by face size, let the body fall off the bottom).
+- Every video and film opens on a light frame, never a dark card.
+- Music: a different track per video (Lyria 3 Pro via OpenRouter, about $0.08 each).
+- Trim loading or skeleton states out of prototype recordings (check frame std for blank spans).
+- In shell loops that run ffmpeg or Python renders, redirect stdin from /dev/null, or ffmpeg swallows the loop's input.
+- Send all zips together at the end when Mac asks for them "in a row".

@@ -228,9 +228,9 @@ def st_vlog(t):
     if a: fx.composite(f, hook_img("h", lambda: big_text(["ONE DAY.", "HOW MANY BOUNTIES?"], 74, (13, 13, 13), box=(226, 178, 84))), OW/2, safe_y(t, "below", 220), 0.9 + 0.1*spring(t - H0, 0.3), a, -2)
     caps(f, t, x=(270 if (x and (fxb + fw/2) < OW/2) is False else OW/2) if not x else (300 if fxb + fw/2 >= OW/2 else 780), maxw=520 if x else 900)
     logo_moments(f, t); url_moment(f, t); return f
-GS_SEQ = [(at("Look at this") - 0.1, [("signup", 0.0, 1.6)]), (at("And the idea") - 0.1, [("partner_create", 0.5, 13.5)]), (at("Then people can join") - 0.1, [("browse_feed", 0.5, 8.7)]), (at("And for hunters") - 0.1, [("find_claim", 4.6, 9.0), ("find_claim", 12.9, 15.6)])] if NAME == "UGC12" else []
+GS_SEQ = [(at("Look at this") - 0.1, [("signup", 0.0, 1.2)]), (at("And the idea") - 0.1, [("partner_create", 0.5, 1.38), ("partner_create", 3.05, 13.5)]), (at("Then people can join") - 0.1, [("browse_feed", 0.5, 8.7)]), (at("And for hunters") - 0.1, [("find_claim", 4.6, 9.0), ("find_claim", 12.9, 15.6)])] if NAME == "UGC12" else []
 def st_gs_float(t):
-    f, m = footage(t, True); out = np.empty_like(f); out[:] = 13
+    f, m = footage(t, True); out = np.empty_like(f); out[:] = PAPER
     cur = [g for g in GS_SEQ if g[0] <= t]
     if cur:
         t0, spec = cur[-1]; lt = t - t0; kin_ = s_(lt/0.5); fr = live_img(spec, 1.0, lt, (860, 1864))
@@ -238,7 +238,7 @@ def st_gs_float(t):
         dev3d.phone3d(out, fr, dict(x=OW/2, y=OH*0.36 + (1 - kin_)*300, s=1.28*zoom, yaw=yaw, pitch=8, roll=-2), alpha=kin_)
     pf, pm = torso_layer(f, m, t, 230, OW/2, OH*0.70); out = out*(1 - pm[..., None]) + pf*pm[..., None]
     a = hook_alpha(t)
-    if a: fx.composite(out, hook_img("h", lambda: big_text(SV["hook"], 96, (255, 255, 255))), OW/2, 330, 0.9 + 0.1*spring(t - H0, 0.3), a)
+    if a: fx.composite(out, hook_img("h", lambda: big_text(SV["hook"], 96, (13, 13, 13))), OW/2, 330, 0.9 + 0.1*spring(t - H0, 0.3), a)
     caps(out, t, y=OH - 190); url_moment(out, t, OH - 330); return out
 def st_chat(t):
     f, m = footage(t); dx, dy, r = 7*math.sin(t*2.3) + 4*math.sin(t*5.1), 6*math.sin(t*1.7 + 1), 0.35*math.sin(t*1.3)
@@ -265,7 +265,7 @@ def _link_card():
     fx.composite(c[..., :3], t1, 240 + t1.shape[1]/2, 90); fx.composite(c[..., :3], t2, 240 + t2.shape[1]/2, 150); c[..., :3] = c[..., [2, 1, 0]]; return c
 ENGINES = {"punch": st_punch, "cards": st_cards, "split": st_split, "loom": st_loom, "gs_side": st_gs_side, "cinema": st_cinema, "contrast": st_contrast,
            "duet": st_duet, "vlog": st_vlog, "gs_float": st_gs_float, "chat": st_chat}
-END_INK = STY in ("cinema", "gs_float", "contrast")
+END_INK = STY in ("cinema", "contrast")
 def frame_at(t):
     if t >= MAIN:
         u = t - MAIN; f = np.empty((OH, OW, 3), np.float32); f[:] = (13 if END_INK else PAPER)

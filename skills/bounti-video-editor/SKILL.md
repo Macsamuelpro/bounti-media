@@ -64,6 +64,12 @@ Hook (strongest claim/question, first 3 s) → one coherent middle (one story or
 - Visuals (`pipeline/launch2/film.py` + `shots.py`): phones and a laptop as 3D perspective planes with keyframed yaw/pitch/roll, soft shadows, glass sheen, exploded screen layers, a laptop + phone duo for desktop and mobile, three-phone fans, masked line-reveal type with gold highlight words, whip/zoom transitions, two-pass loudness to -14 LUFS.
 - Desktop designs: Landing Desktop, DeskFeed, DeskMissions (recorded with `pipeline/live/drec.js`). Partner and publisher screens exist only on mobile.
 
+## UGC v2 style engines (`pipeline/ugc_render2.py` + `ugc_v2_frames.py` + `ugc_styles2.py`)
+punch (jump-cut punch-ins, chest hook card, full-screen app cutaways), cards (Mac's L8), split (stacked), loom (screen-share + face bubble),
+gs_side (green screen A: full-bleed app, torso right, step badges), cinema (letterbox, serif captions in bars, warm grain, polaroid app card),
+contrast (B&W problem + word cards, colour on the turn, 3D phone), duet (side-by-side panels), vlog (DAY 1 HUD, ticking checklist, whips, phone peek),
+gs_float (green screen B: paper backdrop, floating 3D phone, torso centred), chat (handheld, chat-bubble hook, link card that opens into the app).
+
 ## Practical limits
 - 15 GB RAM: one render at a time (plus mask extraction).
 - Person masks: u2net_human_seg.onnx (rembg release) every 3rd frame (`masks7.py`), ~1.5 min per clip.

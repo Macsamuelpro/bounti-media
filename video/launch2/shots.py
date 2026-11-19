@@ -33,8 +33,8 @@ def at(li, off, shot, tr="whip", **k): d = dict(shot); d.update(at=(li, off), tr
 FILMS = {}
 # ---------------- HUNTERS ----------------
 FILMS["H1-No-Catch"] = dict(music="hunter", reveal_line=2, lead=0.35, gaps={1: 0.45, 2: 0.5}, shots=[
- at(0, 0.0, T(["Another app that", "pays you to *tap*?"], "ink"), "cut"),
- at(0, 2.9, T(["*Sure.*"], "paper", size=260), "cut"),
+ at(0, 0.0, T(["Another app that", "pays you to *tap*?"], "paper"), "cut"),
+ at(0, 2.9, T(["*Sure.*"], "ink", size=260), "cut"),
  at(1, 0.0, T(["Except this one", "*checks* the work."], "ink"), "cut"),
  at(1, 2.9, T(["And actually", "*pays*."], "ink", size=200), "cut"),
  at(2, 0.0, LOGO("", ""), "zoom"),
@@ -65,12 +65,12 @@ FILMS["H2-Your-Phone"] = dict(music="hunter", reveal_line=3, lead=0.5, gaps={0: 
 ])
 # ---------------- PARTNERS ----------------
 FILMS["P1-Real-People"] = dict(music="partner", reveal_line=2, lead=0.4, gaps={0: 0.3, 1: 0.55}, shots=[
- at(0, 0.0, T(["*50,000* people", "saw your ad."], "ink"), "cut"),
- at(0, 2.0, T(["Lovely."], "paper", size=220), "cut"),
- at(1, 0.0, T(["How many", "*did* anything?"], "ink"), "cut"),
+ at(0, 0.0, T(["*50,000* people", "saw your ad."], "paper"), "cut"),
+ at(0, 2.0, T(["Lovely."], "ink", size=220), "cut"),
+ at(1, 0.0, T(["How many", "*did* anything?"], "paper"), "cut"),
  at(2, 0.0, LOGO("Bounti Partners", ""), "zoom"),
  at(2, 1.8, duo("d_feed", ("browse_feed", 0.8, 7.5), ["*Real* people", "behind your brand."])),
- at(2, 5.0, hero(("partner_create", 1.0, 6.4), ["You choose", "the *action*."], "right")),
+ at(2, 5.0, hero(("partner_create", 3.05, 7.4), ["You choose", "the *action*."], "right")),
  at(3, 0.0, hero(("partner_create", 6.0, 13.4), ["Add your link.", "Go *live*."], "left", spd=1.6)),
  at(4, 0.0, hero(("find_claim", 7.4, 12.8), ["Every action", "is *checked*."], "orbit", spd=1.3)),
  at(4, 2.2, T(["Doesn't pass?", "You're *not charged*."], "ink", size=140), "cut"),
@@ -79,9 +79,9 @@ FILMS["P1-Real-People"] = dict(music="partner", reveal_line=2, lead=0.4, gaps={0
  at(7, 0.0, LOGO("Bounti Partners", "partners.earnbounti.com"), "zoom"),
 ])
 FILMS["P2-Pay-For-Results"] = dict(music="partner", reveal_line=1, lead=0.4, gaps={0: 0.4, 1: 0.45}, shots=[
- at(0, 0.0, T(["What if you only paid", "for what *happened*?"], "ink"), "cut"),
- at(1, 0.0, T(["Not impressions.", "Not reach.", "*Actions.*"], "paper", stagger=0.95, size=170), "cut"),
- at(2, 0.0, trio([("partner_create", 1.8, 3.6), ("partner_create", 3.0, 6.0), ("browse_feed", 2.6, 6.6)], ["Every *goal*,", "one place."])),
+ at(0, 0.0, T(["What if you only paid", "for what *happened*?"], "paper"), "cut"),
+ at(1, 0.0, T(["Not impressions.", "Not reach.", "*Actions.*"], "ink", stagger=0.95, size=170), "cut"),
+ at(2, 0.0, trio([("partner_create", 3.05, 4.8), ("partner_create", 4.4, 7.4), ("browse_feed", 2.6, 6.6)], ["Every *goal*,", "one place."])),
  at(2, 4.2, duo("d_missions", ("partner_create", 4.0, 13.4), ["Leads. Installs.", "*Conversions.*"])),
  at(3, 0.0, hero(("browse_feed", 0.6, 8.6), ["In front of", "*real* people."], "right", spd=1.3)),
  at(3, 2.8, hero(("find_claim", 7.4, 15.4), ["Every action", "*checked*."], "left", spd=1.6), sfx=[(4.0, "money-coin-drop", -13)]),
@@ -91,8 +91,8 @@ FILMS["P2-Pay-For-Results"] = dict(music="partner", reveal_line=1, lead=0.4, gap
 ])
 # ---------------- PUBLISHERS ----------------
 FILMS["U1-The-Wall"] = dict(music="publisher", reveal_line=2, lead=0.4, gaps={0: 0.3, 1: 0.55}, shots=[
- at(0, 0.0, T(["Coins. Gems.", "*Points.*"], "ink", size=190), "cut"),
- at(1, 0.0, T(["What if every reward", "*earned you* money?"], "paper"), "cut"),
+ at(0, 0.0, T(["Coins. Gems.", "*Points.*"], "paper", size=190), "cut"),
+ at(1, 0.0, T(["What if every reward", "*earned you* money?"], "ink"), "cut"),
  at(2, 0.0, LOGO("The Bounti wall", ""), "zoom"),
  at(2, 1.9, hero(("pub_wall", 0.6, 4.4), ["Right inside", "*your* app."], "rise")),
  at(3, 0.0, hero(("pub_wall", 3.6, 8.6), ["Real bounties.", "*Your* reward."], "orbit")),
@@ -102,9 +102,9 @@ FILMS["U1-The-Wall"] = dict(music="publisher", reveal_line=2, lead=0.4, gaps={0:
  at(6, 0.0, LOGO("Bounti for publishers", "partners.earnbounti.com"), "zoom"),
 ])
 FILMS["U2-Easy-Setup"] = dict(music="publisher", reveal_line=1, lead=0.4, gaps={0: 0.5, 1: 0.45}, shots=[
- at(0, 0.0, T(["Quick and painless", "integrations."], "ink"), "cut"),
- at(0, 2.7, T(["Said *nobody*.", "Ever."], "paper", stagger=0.6, size=190), "cut"),
- at(1, 0.0, T(["This one", "*actually* is."], "ink", size=190), "cut"),
+ at(0, 0.0, T(["Quick and painless", "integrations."], "paper"), "cut"),
+ at(0, 2.7, T(["Said *nobody*.", "Ever."], "ink", stagger=0.6, size=190), "cut"),
+ at(1, 0.0, T(["This one", "*actually* is."], "paper", size=190), "cut"),
  at(2, 0.0, dict(hero(("pub_setup", 0.6, 4.4), ["Name your *app*."], "right"), crop_top=True)),
  at(2, 3.0, T(["Coins. Gems. Points.", "*Your call.*"], "paper", stagger=0.5, size=150), "cut"),
  at(3, 0.0, hero(("pub_setup", 7.7, 11.5), ["Ready-made wall,", "or your *own* screens."], "left")),
