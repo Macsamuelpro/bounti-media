@@ -37,7 +37,8 @@ def composite(frame_bgr_f32, rgba, cx, cy, scale=1.0, alpha=1.0, rot=0.0):
         M[0, 2] += nw/2 - w/2; M[1, 2] += nh/2 - h/2
         im = cv2.warpAffine(im, M, (nw, nh), flags=cv2.INTER_LINEAR, borderValue=(0, 0, 0, 0))
     h, w = im.shape[:2]; x0, y0 = int(round(cx - w/2)), int(round(cy - h/2))
-    xa, ya, xb, yb = max(x0, 0), max(y0, 0), min(x0 + w, OW), min(y0 + h, OH)
+    FH, FW = frame_bgr_f32.shape[:2]
+    xa, ya, xb, yb = max(x0, 0), max(y0, 0), min(x0 + w, FW), min(y0 + h, FH)
     if xa >= xb or ya >= yb: return
     src = im[ya - y0:yb - y0, xa - x0:xb - x0]; a = src[..., 3:4]/255*alpha
     dst = frame_bgr_f32[ya:yb, xa:xb]

@@ -51,3 +51,11 @@ Rules learned from Mac's feedback across five edits and from 13 reference videos
 - Match every clip to -19/-20 LUFS before the mix.
 - Run continuous room tone under the cuts. Duck the music under speech with a sidechain.
 - Master to -14 LUFS with a true peak of -1.5 dB.
+
+## 2026-11-19 additions (Mac)
+- UGC: editor notes are suggestions; use judgment per video. Do not put Bounti pages everywhere, only where a line describes something on screen.
+- Pages must match the words exactly; no filler pages.
+- Pages are live and functional (recorded interactions with the prototype), never static images. Green screen backdrops too.
+- Short cut-downs must be at least 1:00 (and at most 1:45): extend with whole lines that continue the story, not filler.
+- Learn Mac's L8 podcast-card style (Style D in SKILL.md).
+- Back up every edit to github Macsamuelpro/bounti-media, always.

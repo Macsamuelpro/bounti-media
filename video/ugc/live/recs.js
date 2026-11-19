@@ -42,4 +42,13 @@ module.exports = {
     const inp = a.p.locator('input').first(); await inp.scrollIntoViewIfNeeded(); await a.wait(700);
     const bb = await inp.boundingBox(); await a.tap(bb.x + bb.width / 2, bb.y + bb.height / 2); await a.p.keyboard.type('instagram.com/zurifashion', { delay: 55 }); await a.wait(1800);
     await a.tapEl('Continue'); await a.wait(3000); } },
+  // publisher: name the app, pick Game, add it, then choose how bounties show (scrolls past the reward amounts quickly)
+  pub_setup: { file: 'Bounti Partners', view: V, prep: (p) => boot(p, 'pubsetup', 3000), run: async (a) => {
+    await a.wait(800); const inp = a.p.locator('input').first(); const bb = await inp.boundingBox(); await a.tap(bb.x + bb.width / 2, bb.y + bb.height / 2);
+    await a.p.keyboard.type('Kopa Quest', { delay: 70 }); await a.wait(500); await a.tapEl('Game'); await a.wait(500);
+    const l = a.p.locator('input').nth(1); const lb = await l.boundingBox(); await a.tap(lb.x + lb.width / 2, lb.y + lb.height / 2); await a.p.keyboard.type('https://play.google.com/store/apps/kopaquest', { delay: 22 }); await a.wait(400);
+    await a.tapEl('Add it'); await a.wait(1600); await a.reveal('Preview the wall', 1300); await a.wait(400); await a.tapEl('bounty wall'); await a.wait(2400); } },
+  // publisher preview: the game, then the Bounti wall inside it
+  pub_wall: { file: 'Bounti Partners', view: V, prep: async (p) => { await boot(p, 'pubsetup', 3000); await p.evaluate(() => [...document.querySelectorAll('button')].find(b => (b.innerText || '').includes('Preview the wall')).click()); await p.waitForTimeout(1500); },
+    run: async (a) => { await a.wait(1200); await a.tapJs('Free'); await a.wait(2600); await a.scroll(300, 900, 472, 1300); await a.wait(2000); } },
 };

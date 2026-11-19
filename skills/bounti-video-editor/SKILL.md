@@ -30,6 +30,16 @@ You are Mac's chief editor. Read PLAYBOOK.md in this folder before every edit: i
 11. **QA before sending**: frames at every join, scene edge, caption and card moment; loudness numbers; read the full caption script. You cannot watch or listen: say so and give the numbers.
 12. **Deliver**: SendUserFile; zip multiple files (`zip -0`); back up working files to github Macsamuelpro/bounti-media under `video/<project>/` (no file over 50 MB, no renders or raw footage).
 
+## App screens in videos: live, matched, sparing (Mac, 2026-11-19)
+- Use phone inserts only where a line describes something the viewer can see; most lines need none. One to three inserts per UGC video, never one per sentence. Editor notes are suggestions, not orders.
+- The screen must show exactly what is being said (browse = swiping the feed, "check the requirements" = the rules sheet, "submit / approved" = verification then the pending reward, "dashboard" = profile balances).
+- Never a static screenshot when the page can be driven: record the working prototype in `Bounti/docs/design/export` (`pipeline/live/`). Serve the folder over HTTP (`python3 -m http.server 8765`), drive it with Playwright through the app's own `go()` (found via the React fiber: `stateNode.logic`), draw it at scale 2 in a 944x1972 viewport, and record with the CDP screencast (real time). Every on-camera action is a real tap or scroll; taps get a touch ring and a soft tap sound. Set real design state only (e.g. `connected` accounts), never fake approvals.
+- Feed cards snap on one wheel flick (`flick()`), not small wheel steps. Some buttons sit under decoration: `tapJs` clicks through.
+- Green screen = a live recording played full bleed behind the presenter (`greenscreen`/`bg_switch` take live specs).
+- Never show partner prices, cost per action, budgets or publisher revenue in any public video: stop the partner wizard before the budget step; crop or cut past publisher reward amounts.
+- `fx.composite` takes RGB(A) overlays. Convert BGR frames (`[..., ::-1]`) before compositing or skin turns blue.
+- OpenCV mis-decodes yuv444p: encode intermediate clips as yuv420p.
+
 ## Short cut-downs (60–105 s)
 Hook (strongest claim/question, first 3 s) → one coherent middle (one story or one use case) → Bounti reveal → CTA (partners.earnbounti.com, "Let's put a crowd behind your next big thing."). Build each cut as a list of whole lines in `shorts.py`, set display text per line (`TXT`) so sentences read correctly, then render with `EDIT=cuts/<name>.json` and mix with `VOICE=cuts/<name>_voice.wav`. Produce as many distinct, sensible cuts as the material allows, each in a style that fits its ambience.
 
@@ -37,6 +47,14 @@ Hook (strongest claim/question, first 3 s) → one coherent middle (one story or
 - **A Cut-out**: subject on Bounti paper, big keyword behind the head, small highlighted captions in empty space, dissolves.
 - **B Natural/Bold**: real footage, light clean grade, bold italic bar captions, keyword behind subject, zoom-blur transitions, site cards.
 - **C Editorial**: real footage, serif captions on a soft band, vignette, whip transitions, fewer scenes.
+
+- **D Podcast cards (Mac's L8)**: talking head intercut with warm cream (#FCF6E6) cards. The speaker shrinks into a rounded tile with a soft shadow while a keyword types in letter by letter below; small round avatars pop around the tile; fog (blur) dissolves between card states; full cream B-roll cards (icon cluster, sliding post cards with a progress bar, word swap over a photo collage); back on camera, two-size captions (small lead word, big key word). Kit: `scripts/cards.py` (shrink_to_tile, letter_reveal, fog_dissolve, orbit_pop, two_size_caption).
+
+## Launch videos (motion graphics, `pipeline/launch/`)
+- `scripts.py` holds each video as beats: voiceover line plus one scene (words = kinetic type with *gold* highlight and hand-drawn underline, icons = lucide tiles popping on their spoken word, phone = live prototype recording in a bezel with a soft gold disc, logo = blur-in resolve with underline, sub line and URL pill).
+- `vo.py` makes the voiceover locally with Kokoro (kokoro-onnx, model files from the thewh1teagle/kokoro-onnx GitHub release; voices af_heart, am_michael, am_fenrir, bm_george). OpenRouter is the alternative when it has credit.
+- `launch.py <video> V|H` renders 1080x1920 or 1920x1080 at 30 fps: push transitions with motion blur, phone to phone crossfades, whoosh/pop/tap/coin SFX, CC0 music ducked under the voice, -14 LUFS.
+- Copy comes from the design export. No invented numbers, prices or claims.
 
 ## Practical limits
 - 15 GB RAM: one render at a time (plus mask extraction).
