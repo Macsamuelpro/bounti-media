@@ -1,0 +1,112 @@
+{
+ "c1": {
+  "floor": -55.961398,
+  "pieces": [
+   [
+    2.56,
+    4.69,
+    "Let me show you how to find and complete a bounty on bounty."
+   ],
+   [
+    4.92,
+    7.69,
+    "First, you head over to Bounty and explore the available opportunities."
+   ]
+  ]
+ },
+ "c2": {
+  "floor": -75.212509,
+  "pieces": [
+   [
+    0.36,
+    0.51,
+    "[BLANK_AUDIO]"
+   ],
+   [
+    2.07,
+    3.8,
+    "When you find a bounty you're interested in?"
+   ],
+   [
+    4.48,
+    4.93,
+    "Open it."
+   ],
+   [
+    5.27,
+    6.69,
+    "and take a look at the details."
+   ]
+  ]
+ },
+ "c3": {
+  "floor": -57.766502,
+  "pieces": [
+   [
+    0.16,
+    2.75,
+    "You'll see what the brand wants, the instructions you need to follow."
+   ],
+   [
+    3.0,
+    4.99,
+    "and the reward attached to that particular task."
+   ],
+   [
+    5.36,
+    7.61,
+    "If everything looks good, you can proceed to participate."
+   ]
+  ]
+ },
+ "c4": {
+  "floor": -41.608316,
+  "pieces": [
+   [
+    0.21,
+    1.88,
+    "Once you've completed the required action,"
+   ],
+   [
+    2.18,
+    3.38,
+    "Follow the submission process."
+   ],
+   [
+    3.65,
+    4.68,
+    "and send it for verification."
+   ],
+   [
+    5.27,
+    7.74,
+    "When your submission is approved, the reward follows the process."
+   ]
+  ]
+ },
+ "c5": {
+  "floor": -75.953077,
+  "pieces": [
+   [
+    0.16,
+    2.57,
+    "And that's basically how bounty hunting works on Bounty."
+   ],
+   [
+    3.6,
+    4.65,
+    "pretty straightforward, right?"
+   ],
+   [
+    5.26,
+    7.57,
+    "visit urnbounty.com to get started."
+   ],
+   [
+    7.93,
+    8.05,
+    "Let's go."
+   ]
+  ]
+ }
+}

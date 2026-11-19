@@ -1,0 +1,92 @@
+{
+ "c1": {
+  "floor": -76.140249,
+  "pieces": [
+   [
+    1.64,
+    4.17,
+    "If you're someone who spends a lot of time on your phone..."
+   ],
+   [
+    4.56,
+    6.04,
+    "Let me introduce you to something."
+   ],
+   [
+    6.6,
+    7.67,
+    "It's called bounty."
+   ]
+  ]
+ },
+ "c2": {
+  "floor": -68.590738,
+  "pieces": [
+   [
+    0.12,
+    0.92,
+    "Basically,"
+   ],
+   [
+    1.65,
+    4.81,
+    "It's a platform where brands and businesses post tasks."
+   ],
+   [
+    5.16,
+    7.53,
+    "that people can complete in exchange for rewards."
+   ]
+  ]
+ },
+ "c3": {
+  "floor": -77.019843,
+  "pieces": [
+   [
+    1.45,
+    2.75,
+    "You can join as a hunter."
+   ],
+   [
+    3.37,
+    5.31,
+    "browse through the available bounties."
+   ],
+   [
+    5.71,
+    7.46,
+    "and choose the ones that interest you."
+   ]
+  ]
+ },
+ "c4": {
+  "floor": -61.468785,
+  "pieces": [
+   [
+    1.39,
+    5.35,
+    "And the cool thing is that you can actually see what each task requires."
+   ],
+   [
+    5.68,
+    7.45,
+    "before you decide to participate."
+   ]
+  ]
+ },
+ "c5": {
+  "floor": -49.580972,
+  "pieces": [
+   [
+    0.16,
+    3.82,
+    "So you're not just randomly doing things, you're choosing specific opportunities."
+   ],
+   [
+    4.12,
+    7.89,
+    "Anyway, I thought I'd share this with you. Check out EarnBounty.com and see what's available."
+   ]
+  ]
+ }
+}

@@ -9,7 +9,7 @@ for p in (HERE, os.path.join(ROOT, "editkit"), os.path.join(ROOT, "v3")): sys.pa
 import mg7, captions as CAP, transitions as TR, grade as GR
 from collections import OrderedDict
 V = sys.argv[1]; OUT = sys.argv[2]; FPS = 24; OW, OH, SW, SH = 1080, 1920, 720, 1280
-E = json.load(open(os.path.join(HERE, "edit7.json"))); segs = E["segs"]; words = E["words"]
+E = json.load(open(os.environ.get("EDIT", os.path.join(HERE, "edit7.json")))); segs = E["segs"]; words = E["words"]
 END = 3.0; MAIN = E["duration"]; DUR = MAIN + END; N = int(round(DUR*FPS))
 def s_(t): t = min(max(t, 0.0), 1.0); return t*t*(3 - 2*t)
 def out_(t): t = min(max(t, 0.0), 1.0); return 1 - (1 - t)**3
@@ -19,17 +19,23 @@ def tl(txt_start):
     raise KeyError(txt_start)
 def at(txt, end=False):
     g = tl(txt); return g["t0"] + (g["b"] if end else g["a"]) - g["s0"]
-# ---------------- animated scenes on the timeline ----------------
-SCN = [("poof", 0.0, at("Poof", True) + 0.15),
-       ("scroll_past", at("And every month,"), at("Okay, and")),
-       ("empty_store", at("Opening day"), at("Please.") + 0.0),
-       ("rsvp", at("The only people"), at("You need a crowd")),
-       ("crowd", at("You need a crowd"), at("Now, let me")),
-       ("spread", at("What if you could get"), at("People watching")),
-       ("busy_store", at("Imagine people already"), at("Now someone passing")),
-       ("bounti", at("It's called Bounti") - 0.1, at("We've got crowd")),
-       ("pillars", at("We've got crowd"), at("Basically,")),
-       ("partners", at("head over to"), MAIN)]
+def has(txt):
+    try: tl(txt); return True
+    except KeyError: return False
+def scene(name, start, ends, pad=0.0):
+    if not has(start): return None
+    a = at(start) + pad; i = [k for k, g in enumerate(segs) if g["txt"].startswith(start)][0]
+    for g in segs[i + 1:]:
+        if any(g["txt"].startswith(e) for e in ends): return (name, a, g["t0"] + g["a"] - g["s0"])
+    return (name, a, at(start, True) + 0.3)
+SCN = [("poof", 0.0, at("Poof", True) + 0.15)] if has("Poof") else []
+for args in [("scroll_past", "And every month,", ["Okay, and"]), ("empty_store", "Opening day", ["Please."]),
+             ("rsvp", "The only people", ["You need a crowd"]), ("crowd", "You need a crowd", ["Now, let me", "Imagine people"]),
+             ("spread", "What if you could get", ["People watching"]), ("busy_store", "Imagine people already", ["Now someone passing"]),
+             ("bounti", "It's called Bounti", ["We've got crowd"], -0.1), ("pillars", "We've got crowd", ["Basically,", "And the beautiful", "and the beautiful", "Head over", "head over"])]:
+    sc = scene(*args)
+    if sc: SCN.append(sc)
+if has("Head over") or has("head over"): SCN.append(("partners", at("Head over" if has("Head over") else "head over"), MAIN))
 if V == "C": SCN = [s for s in SCN if s[0] not in ("rsvp", "crowd")]
 TRANS_F = 6
 def scene_at(t):
@@ -103,13 +109,34 @@ else:
     st = dict(CAP.STYLES["highlighter"]); st.update(family="Inter", weight=800, size=58, hl_col=(255, 214, 10), fill=(13, 13, 13), shadow=0)
     CPT = CAP.Captioner(CHUNKS, st, "word_by_word", y=1400, max_words=4, max_chars=18, hidden=[(a, b) for _, a, b in SCN] + [(MAIN, DUR)])
 CPT.max_w = 560 if V == "A" else 960
+if V == "A":
+    st2 = dict(st); st2.update(box=(255, 255, 255), box_alpha=0.94)
+    CPT2 = CAP.Captioner(CHUNKS, st2, "word_by_word", y=1400, max_words=4, max_chars=18, hidden=[(a, b) for _, a, b in SCN] + [(MAIN, DUR)]); CPT2.max_w = 700
 SPOTS = {"A": [(360, 1380), (720, 1500), (380, 1560), (700, 1360)], "B": [(540, 1300), (540, 1180), (540, 1420)], "C": [(540, 1420)]}[V]
 def caption_pos(ci): return SPOTS[ci % len(SPOTS)]
 _orig_draw = CPT.draw
-def draw_caps(f, t):
+_spot = {}
+CAND = [(540, 420), (300, 760), (780, 760), (300, 1250), (780, 1250), (540, 1620), (540, 1780)]
+def draw_caps(f, t, m=None):
     for ci, c in enumerate(CPT.ch):
         if c["t0"] <= t < c["hold"]:
-            CPT.x, CPT.y = caption_pos(ci); _orig_draw(f, t); return
+            if V == "A":
+                if ci not in _spot:
+                    if m is None: _spot[ci] = caption_pos(ci)
+                    else:
+                        big = behind_text(c["t0"] + 0.05) is not None; best = None
+                        for k, (x, y) in enumerate(CAND):
+                            if big and y < 520: continue
+                            if y < 620 and any(a <= c["t0"] + 0.05 < b for _, a, b, _ in CARDS): continue
+                            ov = (m[max(0, y - 80):y + 80, max(0, x - 290):x + 290] > 0.4).mean()
+                            sc = ov + 0.02*k + (0.05 if (ci > 0 and _spot.get(ci - 1) == (x, y)) else 0)
+                            if best is None or sc < best[0]: best = (sc, (x, y))
+                        _spot[ci] = best[1] if best[0] < 0.06 else ("box", (540, 1560))
+                if _spot[ci][0] == "box":
+                    CPT2.x, CPT2.y = _spot[ci][1]; CPT2.draw(f, t); return
+                CPT.x, CPT.y = _spot[ci]
+            else: CPT.x, CPT.y = caption_pos(ci)
+            _orig_draw(f, t); return
 BIGF = CAP.font("Inter", 230, 900)
 _bigcache = {}
 def big_word(w, col):
@@ -132,15 +159,19 @@ def behind_text(t):
             return big_word(w, col), al, 1.0 + 0.04*(1 - out_(u/0.4)), 250 + 30*(1 - out_(u/0.35))
     return None
 # ---------------- site cards (version B) ----------------
-CARDS = [("Follow_Bounty", at("sharing your links"), at("Engaging with"), (820, 640)),
-         ("Like_a_video", at("You've launched a website"), at("sending it to"), (790, 700)),
-         ("Your_wallet", at("you decide what"), at("not just sitting"), (780, 620)),
-         ("Link_your_accounts", at("Basically,"), at("and the beautiful"), (790, 640))] if V in ("B", "A") else []
+_cards = [("Follow_Bounty", "sharing your links", "Engaging with"), ("Like_a_video", "You've launched a website", "sending it to"),
+          ("Your_wallet", "You decide what", "Not just sitting"), ("Your_wallet", "you decide what", "not just sitting"), ("Link_your_accounts", "Basically,", "and the beautiful")]
+CARDS = []
+if V in ("A", "B"):
+    for nm, st_, en in _cards:
+        if has(st_):
+            a0 = at(st_); b0 = at(en) if has(en) else at(st_, True) + 0.6
+            CARDS.append((nm, a0, b0, (820, 640)))
 def draw_cards(f, t):
     for name, a, b, (x, y) in CARDS:
         if a <= t < b:
             u = t - a; k = mg7.pop(u); al = min(1, k)*(1 - s_((t - (b - 0.25))/0.25))
-            mg7.paste(f, mg7.card(name, 430), x, y + 20*(1 - out_(u/0.3)), 0.85 + 0.15*k, al)
+            mg7.paste(f, mg7.card(name, 360), 855, 470 + 20*(1 - out_(u/0.3)), 0.85 + 0.15*k, al)
 # ---------------- frame ----------------
 PAPER = mg7.paper()
 def scene_frame(t):
@@ -150,7 +181,7 @@ def main_frame(t):
     if V == "A":
         cut = PAPER.copy(); bt = behind_text(t)
         if bt: mg7.paste(cut, bt[0], OW/2, bt[3], bt[2], bt[1])
-        mm = cv2.GaussianBlur(m, (0, 0), 1.2)[..., None]
+        mm = cv2.GaussianBlur(np.clip((m - 0.35)/0.4, 0, 1), (0, 0), 1.2)[..., None]
         sh = cv2.GaussianBlur(m, (0, 0), 14)[..., None]; cut = cut*(1 - 0.18*np.roll(sh, 18, 0))
         f = cut*(1 - mm) + f*mm
     elif V == "B":
@@ -165,13 +196,15 @@ def main_frame(t):
         bt = behind_text(t)
         if bt: mg7.paste(f, bt[0], OW/2, 330, 1.0, bt[1]*0.95)
     draw_cards(f, t)
+    global LAST_M; LAST_M = m
     return f
+LAST_M = None
 def frame_at(t):
     if t >= MAIN:
         return mg7.sc_end(t - MAIN, END)
     sc = scene_at(t)
     base = scene_frame(t) if sc else main_frame(t)
-    if not sc: draw_caps(base, t)
+    if not sc: draw_caps(base, t, LAST_M)
     # transitions at scene boundaries
     for name, a, b in SCN:
         for edge, into in ((a, True), (b, False)):

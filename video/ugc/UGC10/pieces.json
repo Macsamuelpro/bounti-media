@@ -1,0 +1,87 @@
+{
+ "c1": {
+  "floor": -57.764099,
+  "pieces": [
+   [
+    0.31,
+    7.15,
+    "Okay, so I've just discovered this platform called Bounty and I want to see what it's all about."
+   ]
+  ]
+ },
+ "c2": {
+  "floor": -51.085944,
+  "pieces": [
+   [
+    0.18,
+    3.39,
+    "Apparently, it's a platform where businesses post different tasks."
+   ],
+   [
+    3.96,
+    5.99,
+    "and people can complete them to earn rewards."
+   ],
+   [
+    6.43,
+    7.14,
+    "So let's have a look."
+   ]
+  ]
+ },
+ "c3": {
+  "floor": -70.612245,
+  "pieces": [
+   [
+    0.57,
+    2.55,
+    "Okay, this is the Hunter Dashboard."
+   ],
+   [
+    3.41,
+    6.14,
+    "And here we have the available bounties."
+   ],
+   [
+    6.54,
+    7.36,
+    "Let's open one."
+   ]
+  ]
+ },
+ "c4": {
+  "floor": -56.90433,
+  "pieces": [
+   [
+    0.34,
+    7.7,
+    "Oh, interesting. So you can actually see what the task requires, the instructions, and the reward before participating."
+   ]
+  ]
+ },
+ "c5": {
+  "floor": -71.911597,
+  "pieces": [
+   [
+    1.61,
+    6.93,
+    "I like that you can browse through different opportunities and decide which ones make sense for you."
+   ]
+  ]
+ },
+ "c6": {
+  "floor": -57.353695,
+  "pieces": [
+   [
+    0.8,
+    5.24,
+    "Well, that's my first look at Bounty. I'm definitely interested in exploring more."
+   ],
+   [
+    5.59,
+    7.68,
+    "You can check it out at urnbounty.com."
+   ]
+  ]
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "c1": {
+  "floor": -60.796452,
+  "pieces": [
+   [
+    2.28,
+    2.37,
+    "[BLANK_AUDIO]"
+   ],
+   [
+    2.71,
+    7.48,
+    "Imagine getting rewarded for doing things that businesses and brands actually need people to do."
+   ]
+  ]
+ },
+ "c2": {
+  "floor": -55.26558,
+  "pieces": [
+   [
+    0.21,
+    1.95,
+    "That's actually the idea behind bounty."
+   ],
+   [
+    2.23,
+    7.58,
+    "It's a platform that connects businesses with people willing to complete specific tasks in exchange for rewards."
+   ]
+  ]
+ },
+ "c3": {
+  "floor": -60.980731,
+  "pieces": [
+   [
+    0.25,
+    1.86,
+    "and the process is pretty straightforward."
+   ],
+   [
+    2.34,
+    3.89,
+    "You explore available bounties?"
+   ],
+   [
+    4.18,
+    4.78,
+    "Choose one."
+   ],
+   [
+    5.15,
+    6.17,
+    "Check the requirements."
+   ],
+   [
+    6.43,
+    7.81,
+    "Complete the task and submit it."
+   ]
+  ]
+ },
+ "c4": {
+  "floor": -55.642652,
+  "pieces": [
+   [
+    0.17,
+    1.78,
+    "So whether it's an online action."
+   ],
+   [
+    2.07,
+    3.0,
+    "A creative task."
+   ],
+   [
+    3.27,
+    5.11,
+    "or another activity a brand needs done."
+   ],
+   [
+    5.49,
+    7.72,
+    "There's a whole world of opportunities to explore."
+   ]
+  ]
+ },
+ "c5": {
+  "floor": -67.158482,
+  "pieces": [
+   [
+    0.24,
+    4.11,
+    "visit EarnBounty.com and see what opportunities are available."
+   ]
+  ]
+ }
+}

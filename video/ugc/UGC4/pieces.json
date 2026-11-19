@@ -1,0 +1,82 @@
+{
+ "c1": {
+  "floor": -56.144513,
+  "pieces": [
+   [
+    0.27,
+    0.39,
+    "[BLANK_AUDIO]"
+   ],
+   [
+    0.83,
+    0.93,
+    "[BLANK_AUDIO]"
+   ],
+   [
+    1.85,
+    7.8,
+    "I just found a platform where everyday people can earn rewards by completing tasks for businesses and brands. Let me show you."
+   ]
+  ]
+ },
+ "c2": {
+  "floor": -59.588005,
+  "pieces": [
+   [
+    0.93,
+    1.87,
+    "It's called Bounty."
+   ],
+   [
+    2.13,
+    5.49,
+    "and it's a marketplace that connects brands looking for specific actions"
+   ],
+   [
+    5.79,
+    8.05,
+    "with people who are willing to complete them."
+   ]
+  ]
+ },
+ "c3": {
+  "floor": -46.128355,
+  "pieces": [
+   [
+    0.15,
+    7.92,
+    "Basically you join as a hunter, explore the available bounties, pick one you like, follow the instructions and complete the task to receive its associated reward once approved."
+   ]
+  ]
+ },
+ "c4": {
+  "floor": -60.715576,
+  "pieces": [
+   [
+    0.21,
+    4.23,
+    "I like that you don't have to be an influencer or owner business to participate."
+   ],
+   [
+    4.87,
+    7.42,
+    "you just need to find opportunities that work for you."
+   ]
+  ]
+ },
+ "c5": {
+  "floor": -99,
+  "pieces": [
+   [
+    1.05,
+    3.41,
+    "So yeah, check out urnboundbounty.com."
+   ],
+   [
+    3.68,
+    6.11,
+    "Create your account and see what's available."
+   ]
+  ]
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "c1": {
+  "floor": -75.987061,
+  "pieces": [
+   [
+    0.76,
+    1.02,
+    "Wait."
+   ],
+   [
+    1.47,
+    5.91,
+    "Why are more people not talking about platforms that connect ordinary people with brands looking for help?"
+   ],
+   [
+    6.5,
+    7.0,
+    "Look at this."
+   ]
+  ]
+ },
+ "c2": {
+  "floor": -65.468317,
+  "pieces": [
+   [
+    0.19,
+    0.93,
+    "This is Bounty."
+   ],
+   [
+    1.5,
+    7.73,
+    "And the idea is actually quite interesting. Businesses and brands can create bounties for specific activities they need people to complete."
+   ]
+  ]
+ },
+ "c3": {
+  "floor": -44.35721,
+  "pieces": [
+   [
+    0.98,
+    2.66,
+    "Then people can join us hunters."
+   ],
+   [
+    3.39,
+    4.58,
+    "browse the opportunities."
+   ],
+   [
+    5.02,
+    7.0,
+    "and participate in the ones they're interested in."
+   ]
+  ]
+ },
+ "c4": {
+  "floor": -57.278637,
+  "pieces": [
+   [
+    0.35,
+    4.24,
+    "So instead of businesses having to find every individual person themselves,"
+   ],
+   [
+    4.63,
+    7.65,
+    "They have a platform where they can make these opportunities available."
+   ]
+  ]
+ },
+ "c5": {
+  "floor": -46.302224,
+  "pieces": [
+   [
+    1.75,
+    2.42,
+    "And for hunters..."
+   ],
+   [
+    2.73,
+    6.11,
+    "It's a place to discover tasks and earn rewards for completing them."
+   ]
+  ]
+ },
+ "c6": {
+  "floor": -55.403566,
+  "pieces": [
+   [
+    1.21,
+    1.77,
+    "Honestly"
+   ],
+   [
+    2.11,
+    4.22,
+    "I think more people should know about this."
+   ],
+   [
+    4.53,
+    7.94,
+    "go to urnboundty.com and check it out."
+   ]
+  ]
+ }
+}
