@@ -56,6 +56,14 @@ Hook (strongest claim/question, first 3 s) → one coherent middle (one story or
 - `launch.py <video> V|H` renders 1080x1920 or 1920x1080 at 30 fps: push transitions with motion blur, phone to phone crossfades, whoosh/pop/tap/coin SFX, CC0 music ducked under the voice, -14 LUFS.
 - Copy comes from the design export. No invented numbers, prices or claims.
 
+
+## Premium launch films v2 (Mac, 2026-11-19: "Apple/Samsung style, premium, not generic")
+- Scripts: research first (product specs plus market research), hook in the first 3 seconds, benefit-led, every claim traced to the specs, global audience (not one country), clean grammar. Use emotion where it earns it: sarcasm on the hook, thought on the turn, calm on the trust line.
+- Voice: OpenRouter has dedicated speech models (`/api/v1/audio/speech`): elevenlabs/eleven-v3 (inline tags like [sarcastic] [curious] [whispers] [sighs] [calm], about $0.08 per 1,000 characters, British premade voices george, daniel, alice, lily), plus openai/gpt-audio, gemini TTS, minimax, fish-audio and others. List them with `GET /api/v1/models?output_modalities=all`. `pipeline/launch2/gen_vo.py` makes two takes per line and keeps the take whose Whisper transcript matches.
+- Music: google/lyria-3-pro-preview via OpenRouter chat completions with `stream: true` (about $0.08 per track, 60 to 70 s, mp3). Analyse beats and the drop with librosa; shift the track so the drop lands on the brand reveal; snap cuts to beats.
+- Visuals (`pipeline/launch2/film.py` + `shots.py`): phones and a laptop as 3D perspective planes with keyframed yaw/pitch/roll, soft shadows, glass sheen, exploded screen layers, a laptop + phone duo for desktop and mobile, three-phone fans, masked line-reveal type with gold highlight words, whip/zoom transitions, two-pass loudness to -14 LUFS.
+- Desktop designs: Landing Desktop, DeskFeed, DeskMissions (recorded with `pipeline/live/drec.js`). Partner and publisher screens exist only on mobile.
+
 ## Practical limits
 - 15 GB RAM: one render at a time (plus mask extraction).
 - Person masks: u2net_human_seg.onnx (rembg release) every 3rd frame (`masks7.py`), ~1.5 min per clip.
