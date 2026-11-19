@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-18T07:54:00+01:00",
+ "last_run": "2026-11-19T07:54:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -122,7 +122,8 @@
    "required_basis": "Median likes over all 4 drops is 0 and all 4 escaped, so the ease-off rule applies. Return rule asks for about x1.3 his last target (50 -> 65), which is unreachable on current numbers; chose 25 likes, slightly above the last drop's 20. Kept likes: replies stay at 1 on every post (likely the thread's own reply), reposts are 0 everywhere.",
    "verdict": null,
    "result": null,
-   "drop_day_note": "Gap of 5 days after drop 4 (one day over the 2 to 4 range because no run happened between 2026-11-13 and 2026-11-18). Wednesday, afternoon window, 14:47 WAT; the only other scheduled @earnbounti post is 08:11 WAT today (over 6h apart). Single drop: Barnaby was due back by drop 5 at the latest. Bounty 3,000,000 -> 5,500,000 (x1.83). His ESCAPED news is in tweet 1; Silas, Morwenna and Krieger escapes are told in the story. Tier 2 is now open (all four Tier 1 villains have verdicts). Next: Silas Kroft return (due by drop 6), Morwenna return (drops 5 to 7), Krieger return (drops 6 to 8); a first Tier 2 reveal or a double could fit soon."
+   "drop_day_note": "Gap of 5 days after drop 4 (one day over the 2 to 4 range because no run happened between 2026-11-13 and 2026-11-18). Wednesday, afternoon window, 14:47 WAT; the only other scheduled @earnbounti post is 08:11 WAT today (over 6h apart). Single drop: Barnaby was due back by drop 5 at the latest. Bounty 3,000,000 -> 5,500,000 (x1.83). His ESCAPED news is in tweet 1; Silas, Morwenna and Krieger escapes are told in the story. Tier 2 is now open (all four Tier 1 villains have verdicts). Next: Silas Kroft return (due by drop 6), Morwenna return (drops 5 to 7), Krieger return (drops 6 to 8); a first Tier 2 reveal or a double could fit soon.",
+   "verdict_note": "2026-11-19 07:54 WAT check: sent 2026-11-18 14:47 WAT, about 17h old (under 48h), 0 likes of 25 (1 reply, 0 reposts, 0 impressions, metrics updated 2026-11-19 00:46Z). Verdict waits for a later run."
   }
  ],
  "villains": {
