@@ -33,8 +33,8 @@ V["P1-Real-People"] = dict(voice="am_michael", music="Advertime", beats=[
  dict(vo="Bounti Partners. Start at partners dot earnbounti dot com.", scene=dict(kind="logo", sub="Bounti Partners", url=PARTNER_URL)),
 ])
 V["P2-Business-Growth"] = dict(voice="bm_george", music="Beat One", beats=[
- dict(vo="Engagement. Community. Traffic.", scene=dict(kind="icons", items=[("heart", "Engagement"), ("users", "Community"), ("mouse-pointer-click", "Traffic")], bg="ink")),
- dict(vo="Leads. App growth. Conversions.", scene=dict(kind="icons", items=[("clipboard-list", "Leads"), ("smartphone", "App growth"), ("badge-check", "Conversions")], bg="paper")),
+ dict(vo="Engagement. Community. Traffic.", scene=dict(kind="icons", items=[("heart", "Engagement"), ("users", "Community"), ("mouse-pointer-click", "Traffic")], bg="paper")),
+ dict(vo="Leads. App growth. Conversions.", scene=dict(kind="icons", items=[("clipboard-list", "Leads"), ("smartphone", "App growth"), ("badge-check", "Conversions")], bg="ink")),
  dict(vo="Run high-performing campaigns with Bounti.", scene=dict(kind="phone", rec=[("partner_create", 0.4, 6.4)], text="Run your\n*campaigns*.")),
  dict(vo="Get real people to take action.", scene=dict(kind="phone", rec=[("find_claim", 4.6, 9.2)], text="*Real* people\ntake action.")),
  dict(vo="And turn engagement into measurable results.", scene=dict(kind="words", text="Engagement into\n*measurable* results.", bg="paper")),
@@ -49,7 +49,7 @@ V["U1-Add-The-Wall"] = dict(voice="af_heart", music="Advertime", beats=[
  dict(vo="Bounti for publishers. Partners dot earnbounti dot com.", scene=dict(kind="logo", sub="Bounti for publishers", url=PARTNER_URL)),
 ])
 V["U2-Set-Up"] = dict(voice="am_michael", music="City Sunshine", beats=[
- dict(vo="Turn your app into a place to earn.", scene=dict(kind="words", text="Turn your app\ninto a place\nto *earn*.", bg="ink")),
+ dict(vo="Turn your app into a place to earn.", scene=dict(kind="words", text="Turn your app\ninto a place\nto *earn*.", bg="paper")),
  dict(vo="Name your app.", scene=dict(kind="phone", rec=[("pub_setup", 0.6, 4.4)], text="Name your\n*app*.", zoom=(0.0, 1.16, 0.35, "static"))),
  dict(vo="Add your link.", scene=dict(kind="phone", rec=[("pub_setup", 4.4, 6.6)], text="Add your\n*link*.", zoom=(0.0, 1.16, 0.35, "static"))),
  dict(vo="Pick how bounties show, and open one link inside your app.", scene=dict(kind="phone", rec=[("pub_setup", 7.7, 11.5)], text="One *link*.")),
