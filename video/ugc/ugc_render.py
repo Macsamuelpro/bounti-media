@@ -126,11 +126,14 @@ def screen_img(name):
         _scr[name] = (im, a, b)
     return _scr[name]
 SW_, BZ = 690, 22; SH_ = int(SW_*844/390)
-def phone(name, u, tap=None):
-    im, a, b = screen_img(name); H = im.shape[0]; win = int(1170*844/390); span = max(H - win, 0)
-    y = int(span*min(1, (a + (b - a)*s_(u)))) if b > a else int(span*min(1, a))
-    crop = im[y:y + win] if H >= win else np.vstack([im, np.full((win - H, 1170, 3), 245, np.uint8)])
-    scr = cv2.resize(crop, (SW_, SH_), interpolation=cv2.INTER_AREA).astype(np.float32)
+def phone(name, u, tap=None, live=None):
+    if live is not None: scr = live.astype(np.float32)
+    else:
+        im, a, b = screen_img(name); H = im.shape[0]; win = int(1170*844/390); span = max(H - win, 0)
+        y = int(span*min(1, (a + (b - a)*s_(u)))) if b > a else int(span*min(1, a))
+        crop = im[y:y + win] if H >= win else np.vstack([im, np.full((win - H, 1170, 3), 245, np.uint8)])
+        scr = cv2.resize(crop, (SW_, SH_), interpolation=cv2.INTER_AREA).astype(np.float32)
+    scr = scr[..., ::-1].copy()   # fx.composite takes RGB(A) overlays
     W2, H2 = SW_ + 2*BZ, SH_ + 2*BZ; out = np.zeros((H2 + 60, W2 + 60, 4), np.float32); x0 = y0 = 30
     def rr(img, x, y, w, h, r, val):
         cv2.rectangle(img, (x + r, y), (x + w - r, y + h), val, -1); cv2.rectangle(img, (x, y + r), (x + w, y + h - r), val, -1)
@@ -144,6 +147,41 @@ def phone(name, u, tap=None):
         k = (u - tap)/0.35; cx, cy = x0 + BZ + SW_//2, y0 + BZ + int(SH_*0.62); r = int(30 + 60*k)
         ov = out.copy(); cv2.circle(ov, (cx, cy), r, (255, 255, 255, 255), -1, cv2.LINE_AA); out = out*(1 - 0.35*(1 - k)) + ov*0.35*(1 - k)
     return out
+# ---------------- live prototype recordings ----------------
+LIVE = os.path.join(S, "ugc/live")
+class _Clip:
+    def __init__(self, name): self.name = name; self.meta = json.load(open(os.path.join(LIVE, name + ".json"))); self.cap = None; self.pos = -1; self.cur = None
+    def frame(self, k):
+        if self.cap is None or k < self.pos: self.cap = cv2.VideoCapture(os.path.join(LIVE, self.name + ".mp4")); self.pos = -1
+        while self.pos < k:
+            ok, f = self.cap.read()
+            if not ok: break
+            self.pos += 1; self.cur = f
+        return self.cur
+_clips = {}
+def clip(name):
+    if name not in _clips: _clips[name] = _Clip(name)
+    return _clips[name]
+def live_plan(spec, W):
+    """spec: [(rec, from_s, to_s), ...] played back to back inside a window of W seconds.
+    Speed is fitted to the window but kept natural (0.8x to 1.45x); extra window time holds the last frame."""
+    L = sum(e - s for _, s, e in spec); spd = min(max(L/max(W, 0.1), 0.8), 1.45); return spd
+def live_at(spec, spd, tl):
+    rt = tl*spd
+    for rec, s, e in spec:
+        if rt < e - s or (rec, s, e) == tuple(spec[-1]): return rec, s + min(rt, e - s)
+        rt -= e - s
+def live_img(spec, spd, tl, size):
+    rec, rt = live_at(spec, spd, tl); f = clip(rec).frame(int(rt*FPS))
+    return cv2.resize(f, size, interpolation=cv2.INTER_AREA)
+def live_taps(spec, spd, a0):
+    """video times of the real taps inside the played segments"""
+    out = []; off = 0.0
+    for rec, s, e in spec:
+        for ev in clip(rec).meta["events"]:
+            if ev["kind"] == "tap" and s <= ev["t"] < e: out.append(a0 + (off + ev["t"] - s)/spd)
+        off += e - s
+    return out
 # ---------------- inserts ----------------
 INS = []
 for ins in CFG["inserts"]:
@@ -151,7 +189,9 @@ for ins in CFG["inserts"]:
     if ins["kind"] == "screen":
         b0 = at(ins["until"]) - 0.12 if ins.get("until") else at(ins["at"], True) + 0.3
         if INS and INS[-1]["kind"] == "screen" and abs(INS[-1]["b"] - a0) < 0.6: a0 = INS[-1]["b"]
-        INS.append(dict(ins, a=a0, b=b0))
+        d = dict(ins, a=a0, b=b0)
+        if ins.get("live"): d["spd"] = live_plan(ins["live"], b0 - a0); d["taps"] = live_taps(ins["live"], d["spd"], a0)
+        INS.append(d)
     elif ins["kind"] == "logo": INS.append(dict(ins, a=a0 + 0.1, b=a0 + 1.9))
     elif ins["kind"] == "url": INS.append(dict(ins, a=a0 + 0.1, b=MAIN))
 if CFG["hook"]["kind"] == "cutout_pop" and INS and INS[0]["kind"] == "screen": INS[0]["a"] = PRE_ROLL
@@ -166,14 +206,14 @@ def cutout_layer(f, m, k_small):
     sc = 1 - 0.56*out_(k_small); M = np.float32([[sc, 0, 0], [0, sc, OH*(1 - sc)]])
     return cv2.warpAffine(f, M, (OW, OH)), cv2.warpAffine(m, M, (OW, OH))
 def compose_screen(t, x, f, m):
-    name = x["screen"]; u = (t - x["a"])/max(x["b"] - x["a"], 0.1)
+    name = x.get("screen"); u = (t - x["a"])/max(x["b"] - x["a"], 0.1)
     if x.get("then") and u >= x["then"][1]: name = x["then"][0]; u = (u - x["then"][1])/(1 - x["then"][1])
     bg = np.broadcast_to(PAPER, (OH, OW, 3)).copy()
     first = not any(y["b"] == x["a"] for y in SCREEN_INS); last = not any(y["a"] == x["b"] for y in SCREEN_INS)
     kin = out_((t - x["a"])/TR_F) if first else 1.0; kout = out_((x["b"] - t)/TR_F) if last else 1.0; k = min(kin, kout)
     if CFG["hook"]["kind"] == "cutout_pop" and x is SCREEN_INS[0]: k = 1.0
     pk = spring(t - x["a"], 0.4) if first else 1.0
-    ph = phone(name, u, x.get("tap")); fx.composite(bg, ph, 600, 820 + 60*(1 - pk), 0.92 + 0.08*min(pk, 1), min(1, pk*1.5) if first else 1.0)
+    ph = phone(name, u, x.get("tap"), live_img(x["live"], x["spd"], t - x["a"], (SW_, SH_)) if x.get("live") else None); fx.composite(bg, ph, 600, 820 + 60*(1 - pk), 0.92 + 0.08*min(pk, 1), min(1, pk*1.5) if first else 1.0)
     if x.get("layout") == "full": return bg*k + f*(1 - k) if k < 1 else bg
     pres_k = k
     if CFG["hook"]["kind"] == "cutout_pop" and x is SCREEN_INS[0]: pres_k = 1.0; pop = spring(t - (segs[0]["t0"] + segs[0]["a"] - segs[0]["s0"]) + 0.1, 0.35)
@@ -208,7 +248,12 @@ def icon_bubble(name):
     s = 190; out = np.zeros((s, s, 4), np.float32); cv2.circle(out, (s//2, s//2), s//2 - 6, (255, 255, 255, 255), -1, cv2.LINE_AA)
     fx.composite(out[..., :3], ic, s/2, s/2); out[..., [0, 2]] = out[..., [2, 0]]; return out
 END_LOGO = logo_rgba(600); END_T1 = text_rgba("Become a Bounti hunter.", inter(64, 900), INK, track=-0.05); END_T2 = text_rgba("earnbounti.com", inter(48, 700), (94, 94, 94))
+GS_SW = list(CFG.get("bg_switch", []))
 def bg_screen(name, t):
+    if isinstance(name, list):       # live recording, full bleed behind the presenter
+        t0 = max([at(a_) - 0.1 for a_, n_ in GS_SW if n_ is name] or [PRE_ROLL]); spd = 1.0
+        f = live_img(name, spd, max(t - t0, 0), (OW, int(OW*1864/860))).astype(np.float32)
+        y = int((f.shape[0] - OH)*CFG.get("gs_anchor", 0.18)); return f[y:y + OH]
     im, a, b = screen_img(name); sc = OW/im.shape[1]; img = cv2.resize(im, (OW, int(im.shape[0]*sc)), interpolation=cv2.INTER_AREA)
     span = max(img.shape[0] - OH, 0); y = int(span*min(1, a + (b - a)*min(1, t/max(MAIN, 1)))); crop = img[y:y + OH]
     if crop.shape[0] < OH: crop = np.vstack([crop, np.full((OH - crop.shape[0], OW, 3), 240, np.uint8)])
@@ -229,6 +274,7 @@ def frame_at(t):
         name = gs
         for at_txt, nm in CFG.get("bg_switch", []):
             if t >= at(at_txt) - 0.1: name = nm
+        if isinstance(name, list) and not any(n_ is name for _, n_ in GS_SW): pass
         b = bg_screen(name, t); b = cv2.GaussianBlur(b, (0, 0), 1.2)*0.92; mm = cv2.GaussianBlur(m, (0, 0), 1.2)[..., None]
         f = b*(1 - mm) + f*mm
     if hook["kind"] == "punch" and t < hook["t0"] + 1.2:
@@ -263,8 +309,8 @@ def frame_at(t):
 prev = os.environ.get("PREVIEW")
 if prev:
     ts = [float(x) for x in prev.split(",")]
-    cv2.imwrite(os.path.join(D, "preview.png"), np.hstack([cv2.resize(np.clip(frame_at(t), 0, 255).astype(np.uint8), (216, 384)) for t in ts]))
-    print("preview", NAME, "dur %.1f" % DUR, [(x["kind"], round(x["a"], 1), round(x["b"], 1)) for x in INS]); sys.exit(0)
+    cv2.imwrite(os.path.join(D, "preview.png"), np.hstack([cv2.resize(np.clip(frame_at(t), 0, 255).astype(np.uint8), (int(os.environ.get("PW", 216)), int(os.environ.get("PW", 216))*16//9)) for t in ts]))
+    print("preview", NAME, "dur %.1f" % DUR, [(x["kind"], round(x["a"], 1), round(x["b"], 1), round(x.get("spd", 0), 2), round(sum(e - s for _, s, e in x["live"])/x["spd"], 1) if x.get("live") else "") for x in INS]); sys.exit(0)
 # ---------------- audio ----------------
 BD = os.path.join(S, "lib/rnn/rnnoise-models/beguiling-drafter-2018-08-30/bd.rnnn")
 CLEAN = ("highpass=f=80,bandreject=f=100:width_type=q:w=8,bandreject=f=200:width_type=q:w=8,"
@@ -294,6 +340,12 @@ if CFG.get("whoosh0"): fx.place_sfx(sfx, "whoosh-fast-medium", 0.35, -10, speech
 if PRE_ROLL: fx.place_sfx(sfx, "whoosh-fast-medium", PRE_ROLL, -10, speech, R)
 for x in SCREEN_INS:
     if not any(y["b"] == x["a"] for y in SCREEN_INS): fx.place_sfx(sfx, "whoosh-fast-soft", x["a"] + 0.1, -12, speech, R)
+for x in SCREEN_INS:
+    for tp in x.get("taps", []):
+        if x["a"] <= tp < x["b"]: fx.place_sfx(sfx, "click-tap-soft", tp, -14, speech, R)
+    if x.get("coin") is not None:
+        tc = x["a"] + x["coin"]/x["spd"]
+        if x["a"] <= tc < x["b"]: fx.place_sfx(sfx, "money-coin-drop", tc, -16, speech, R)
 for ti, _ in ICONS: fx.place_sfx(sfx, "pop-small-in", ti + 0.02, -10, speech, R)
 if CFG.get("timer"):
     for tk in np.arange(2.5, at("Well,") - 0.5, 1.0): fx.place_sfx(sfx, "time-clock", tk, -22, speech, R)

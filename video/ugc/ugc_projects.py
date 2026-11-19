@@ -134,3 +134,54 @@ P["UGC13"] = dict(title="Friend-to-Friend", style="minimal", anim="fade", music=
  inserts=[dict(kind="screen", at="It's called Bounti", until="Basically", screen="feed", layout="cutout"),
           dict(kind="screen", at="And the cool thing", until="So you're not", screen="detail", layout="cutout"), dict(kind="url", at="Anyway")],
  sfx=[("If you're someone", "swish-soft"), ("It's called Bounti", "pop-medium-in"), ("And the cool thing", "tone-ding-mid"), ("Anyway", "notification-success-ding-ding")])
+
+# ---------------------------------------------------------------------------------------------
+# Live inserts (Mac, 2026-11-19): fewer inserts, only where a line describes something on screen,
+# and every phone shows the working Bounti prototype (docs/design/export) driven by real taps,
+# recorded by live/rec.js. Specs are (recording, from_s, to_s) played back to back.
+FIND_CLAIM = [("find_claim", 0.9, 6.9), ("find_claim", 7.4, 9.0), ("find_claim", 12.9, 15.4)]   # browse, open a like bounty, steps, check, reward pending
+CLAIM_ONLY = [("find_claim", 4.6, 9.0), ("find_claim", 12.9, 15.6)]
+BROWSE = [("browse_feed", 0.5, 8.7)]
+REQS = [("trend_rules", 0.8, 13.4)]
+def L(at, until, spec, coin=None, **k): return dict(kind="screen", at=at, until=until, live=spec, layout="cutout", coin=coin, **k)
+P["UGC1"]["inserts"] = [dict(kind="logo", at="There's actually"), L("So you can browse", "And the interesting", FIND_CLAIM, 8.7), dict(kind="url", at="Head over")]
+P["UGC1"]["sfx"] = [("There's actually", "pop-medium-in"), ("Head over", "notification-success-ding-ding")]
+P["UGC2"]["hook"] = dict(kind="text", text="WHAT IF?", t0=0.2, t1=1.7, punch=True)
+P["UGC2"]["inserts"] = [dict(kind="logo", at="Yeah, it's called"), L("you could find a bounty", "And there are", FIND_CLAIM, 8.7), dict(kind="url", at="head over")]
+P["UGC2"]["sfx"] = [("Yeah, it's called", "pop-medium-in"), ("head over", "notification-success-ding-ding")]
+P["UGC3"]["inserts"] = [dict(kind="logo", at="That's actually"), L("You explore available", "So whether", REQS), dict(kind="url", at="Visit")]
+P["UGC3"]["sfx"] = [("That's actually", "pop-medium-in"), ("Visit", "notification-success-ding-ding")]
+P["UGC4"]["inserts"] = [dict(kind="logo", at="It's called Bounti"), L("Basically, you join", "I like that", FIND_CLAIM, 8.7), dict(kind="url", at="So yeah")]
+P["UGC4"]["sfx"] = [("It's called Bounti", "pop-medium-in"), ("So yeah", "notification-success-ding-ding")]
+P["UGC5"]["inserts"] = [L("Let me show you", "When you find", BROWSE),
+                        L("When you find", "If everything", [("missions_detail", 1.0, 4.0), ("missions_detail", 10.4, 16.0)]),
+                        L("If everything", "And that's basically", CLAIM_ONLY, 5.5), dict(kind="url", at="Visit")]
+P["UGC5"]["sfx"] = [("Visit", "notification-success-ding-ding")]
+P["UGC6"]["inserts"] = [dict(kind="logo", at="Bounti."), L("You can join as a hunter", "Anyway", BROWSE), dict(kind="url", at="You can check")]
+P["UGC6"]["sfx"] = [("Bounti.", "pop-medium-in"), ("You can check", "notification-success-ding-ding")]
+P["UGC7"]["inserts"] = [L("That's where", "Instead of just", [("find_claim", 3.6, 9.0), ("find_claim", 12.9, 15.4)], 6.5), dict(kind="url", at="Check out")]
+P["UGC10"]["hook"] = dict(kind="none")
+P["UGC10"]["inserts"] = [dict(kind="logo", at="Okay, so I've"), L("Okay, this is", "And here we have", [("dashboard", 0.7, 6.0)]),
+                         L("And here we have", "Let's open one", [("missions_detail", 0.8, 5.5)]),
+                         L("Let's open one", "I like that", [("missions_detail", 10.4, 16.0)]),
+                         L("I like that", "Well, that's", [("house", 0.6, 9.0)]), dict(kind="url", at="You can check")]
+P["UGC10"]["sfx"] = [("Okay, so I've", "pop-medium-in"), ("You can check", "notification-success-ding-ding")]
+P["UGC11"]["inserts"] = [L("First, I'm checking", "Now I'm going", BROWSE), L("Now I'm going", "Let's get started", REQS),
+                         L("After completing", "Well,", [("my_hunts", 0.6, 10.0)]), dict(kind="url", at="You can try")]
+P["UGC12"]["greenscreen"] = [("signup", 0.0, 1.6)]
+P["UGC12"]["bg_switch"] = [("And the idea", [("partner_create", 0.5, 13.5)]), ("Then people can join", BROWSE), ("And for hunters", CLAIM_ONLY)]
+P["UGC12"]["inserts"] = [dict(kind="url", at="Go to")]
+P["UGC13"]["inserts"] = [dict(kind="logo", at="It's called Bounti"), L("You can join as a hunter", "And the cool thing", BROWSE),
+                         L("And the cool thing", "So you're not", [("trend_rules", 3.9, 13.4)]), dict(kind="url", at="Anyway")]
+P["UGC10"]["sfx"] = [("Okay, so I've", "pop-medium-in"), ("You can check", "notification-success-ding-ding")]
+P["UGC13"]["sfx"] = [("It's called Bounti", "pop-medium-in"), ("Anyway", "notification-success-ding-ding")]
+# fit fixes: every played segment ends inside its line window (no reward or rule cut off)
+REQS_SHORT = [("trend_rules", 3.8, 11.4)]
+P["UGC2"]["inserts"][1] = L("you could find a bounty", "So instead", FIND_CLAIM, 8.7)
+P["UGC3"]["inserts"][1] = L("You explore available", "So whether", [("trend_rules", 3.6, 11.5)])
+P["UGC6"]["inserts"][1] = L("You can join as a hunter", "Anyway", [("browse_feed", 0.5, 8.6)])
+P["UGC10"]["inserts"][1] = L("Okay, this is", "And here we have", [("dashboard", 0.7, 4.0)])
+P["UGC10"]["inserts"][4] = L("I like that", "Well, that's", [("house", 0.6, 8.9)])
+P["UGC11"]["inserts"][1] = L("Now I'm going", "Let's get started", REQS_SHORT)
+P["UGC11"]["inserts"][2] = L("After completing", "Well,", [("my_hunts", 0.6, 8.5)])
+P["UGC13"]["inserts"][2] = L("And the cool thing", "So you're not", [("trend_rules", 3.9, 13.2)])

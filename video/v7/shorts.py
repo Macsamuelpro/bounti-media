@@ -5,13 +5,13 @@ HERE = os.path.dirname(os.path.abspath(__file__)); R = 48000
 FULL = json.load(open(os.path.join(HERE, "edit7.json")))["segs"]
 CTA = [65, 66, 67, 80, 81]
 CUTS = {
- "1-budget":   [0, 1, 2, 3, 4, 5, 6, 7, 12, 13, 14, 63, 64, 65, 66, 67, 71, 72, 73, 74, 75, 80, 81],
+ "1-budget":   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 63, 64, 65, 66, 67, 71, 72, 73, 74, 75, 80, 81],
  "2-opening":  [21, 22, 23, 24, 25, 26, 27, 28, 29, 33, 48, 49, 50, 51, 52, 53, 54, 63, 64, 65, 66, 67, 71, 72, 73, 80, 81],
- "3-viral":    [43, 44, 45, 46, 35, 36, 37, 38, 39, 40, 41, 42, 63, 64, 65, 66, 67, 68, 69, 70, 80, 81],
- "4-web-apps": [12, 13, 14, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 71, 72, 73, 80, 81],
+ "3-viral":    [43, 44, 45, 46, 35, 36, 37, 38, 39, 40, 41, 42, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 80, 81],
+ "4-web-apps": [12, 13, 14, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 80, 81],
  "5-partners": [0, 1, 2, 12, 13, 14, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81],
 }
-TXT = {3: "Every month,", 4: "money goes into ads.", 7: "where are the customers?", 22: "Beautiful interior,", 23: "products arranged, everything looking perfect.",
+TXT = {8: "And please don't let another marketing guru come and tell you", 9: "that your targeting is wrong,", 10: "your interests are wrong,", 11: "or you didn't choose the right audience.", 3: "Every month,", 4: "money goes into ads.", 7: "where are the customers?", 22: "Beautiful interior,", 23: "products arranged, everything looking perfect.",
  25: "And it's just you,", 26: "two staff members", 27: "and your cousin who came to support you.", 36: "What if you could get thousands of people", 37: "helping you spread the word?",
  38: "People watching your content,", 39: "sharing your links,", 40: "engaging with your brand,", 48: "Imagine people already walking in,", 49: "checking out your products,",
  50: "taking pictures", 51: "and talking about the place.", 52: "Now someone passing by sees all that activity and thinks,", 56: "Imagine thousands of people sharing that link,",
