@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-19T07:54:00+01:00",
+ "last_run": "2026-11-25T07:57:00+01:00",
  "pending": null,
  "drops": [
   {
@@ -120,15 +120,59 @@
     "target": 25
    },
    "required_basis": "Median likes over all 4 drops is 0 and all 4 escaped, so the ease-off rule applies. Return rule asks for about x1.3 his last target (50 -> 65), which is unreachable on current numbers; chose 25 likes, slightly above the last drop's 20. Kept likes: replies stay at 1 on every post (likely the thread's own reply), reposts are 0 everywhere.",
+   "verdict": "escaped",
+   "result": {
+    "metric": "likes",
+    "value": 0,
+    "target": 25,
+    "replies": 1,
+    "reposts": 0,
+    "impressions": 2,
+    "metrics_updated_at": "2026-11-24T18:47:21Z"
+   },
+   "drop_day_note": "Gap of 5 days after drop 4 (one day over the 2 to 4 range because no run happened between 2026-11-13 and 2026-11-18). Wednesday, afternoon window, 14:47 WAT; the only other scheduled @earnbounti post is 08:11 WAT today (over 6h apart). Single drop: Barnaby was due back by drop 5 at the latest. Bounty 3,000,000 -> 5,500,000 (x1.83). His ESCAPED news is in tweet 1; Silas, Morwenna and Krieger escapes are told in the story. Tier 2 is now open (all four Tier 1 villains have verdicts). Next: Silas Kroft return (due by drop 6), Morwenna return (drops 5 to 7), Krieger return (drops 6 to 8); a first Tier 2 reveal or a double could fit soon.",
+   "verdict_note": "2026-11-19 07:54 WAT check: sent 2026-11-18 14:47 WAT, about 17h old (under 48h), 0 likes of 25 (1 reply, 0 reposts, 0 impressions, metrics updated 2026-11-19 00:46Z). Verdict waits for a later run. 2026-11-25 07:55 WAT check: about 162h old, 0 likes of 25 (1 reply, 0 reposts, 2 impressions, metrics updated 2026-11-24 18:47Z). Not met and over 72h: ESCAPED. Told in drop 7 (Morwenna's story); no ESCAPED-stamp poster. He returns 2 to 4 drops after drop 5 (drops 7 to 9); bounty 5,500,000 raised 1.5 to 2x on return."
+  },
+  {
+   "n": 6,
+   "date": "2026-11-25",
+   "due_at": "2026-11-25T10:23:00+01:00",
+   "buffer_post_id": "6b0686a2b6204bca46d3b1b0",
+   "villain": "silas-kroft",
+   "kind": "return",
+   "bounty": 28000000,
+   "poster": "posters/2026-11-25-silas-kroft-2.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 20
+   },
+   "required_basis": "Median likes over all 5 prior drops is 0 and all 5 escaped, so the ease-off rule applies. Kept likes: thread posts show 1 comment each (the thread's own reply), reposts are 0 everywhere. Return rule would ask about x1.3 his last 40; eased to 20 likes, in line with the last reachable-looking targets (20, 25).",
    "verdict": null,
    "result": null,
-   "drop_day_note": "Gap of 5 days after drop 4 (one day over the 2 to 4 range because no run happened between 2026-11-13 and 2026-11-18). Wednesday, afternoon window, 14:47 WAT; the only other scheduled @earnbounti post is 08:11 WAT today (over 6h apart). Single drop: Barnaby was due back by drop 5 at the latest. Bounty 3,000,000 -> 5,500,000 (x1.83). His ESCAPED news is in tweet 1; Silas, Morwenna and Krieger escapes are told in the story. Tier 2 is now open (all four Tier 1 villains have verdicts). Next: Silas Kroft return (due by drop 6), Morwenna return (drops 5 to 7), Krieger return (drops 6 to 8); a first Tier 2 reveal or a double could fit soon.",
-   "verdict_note": "2026-11-19 07:54 WAT check: sent 2026-11-18 14:47 WAT, about 17h old (under 48h), 0 likes of 25 (1 reply, 0 reposts, 0 impressions, metrics updated 2026-11-19 00:46Z). Verdict waits for a later run."
+   "drop_day_note": "Gap of 7 days after drop 5 (over the 2 to 4 range: no run happened between 2026-11-19 and 2026-11-25). Wednesday. First DOUBLE drop (5 singles so far): Silas morning 10:23 WAT, Morwenna afternoon 15:41 WAT. Silas was due back by drop 6 at the latest (2 to 4 drops after drop 2). Bounty 16,000,000 -> 28,000,000 (x1.75). No other @earnbounti posts were scheduled at run time."
+  },
+  {
+   "n": 7,
+   "date": "2026-11-25",
+   "due_at": "2026-11-25T15:41:00+01:00",
+   "buffer_post_id": "6b0686aac68d7845a48bb69d",
+   "villain": "morwenna-salt",
+   "kind": "return",
+   "bounty": 9000000,
+   "poster": "posters/2026-11-25-morwenna-salt-2.jpg",
+   "required": {
+    "metric": "likes",
+    "target": 15
+   },
+   "required_basis": "Median likes over all 5 prior drops is 0 and all 5 escaped, so the ease-off rule applies. Kept likes: thread posts show 1 comment each (the thread's own reply), reposts are 0 everywhere. Return rule would ask about x1.3 her last 30; eased to 15 likes as the second drop of a double on the same day.",
+   "verdict": null,
+   "result": null,
+   "drop_day_note": "Second half of the 2026-11-25 double. Morwenna was due back by drop 7 at the latest (2 to 4 drops after drop 3). Bounty 5,000,000 -> 9,000,000 (x1.8). Barnaby's second escape is told in this thread. Next: Krieger return (due drops 6 to 8, so drop 8 at the latest), Barnaby return (drops 7 to 9), and a first Tier 2 reveal (Tier 2 open since drop 5). A cameo is allowed (none yet in 7 drops)."
   }
  ],
  "villains": {
   "barnaby-vane": {
-   "status": "wanted",
+   "status": "escaped",
    "bounty": 5500000,
    "appearances": 2,
    "lore_so_far": [
@@ -137,29 +181,36 @@
     "The price: he can never earn an honest coin again, so he sells noise. Last seen shouting from three harbours at once; his fleet is loud, cheap and very confident.",
     "Drop 5 (return): when nobody answered his first poster he shrank (silence does that to him), got small enough to slip through the net, and hid under a pier for a week.",
     "Four escapes in one week (him, the Butler, the Lure, Ten Thousand); every rumour on the docks ended with his name. He planned none of it and is taking the credit anyway: his Echo Coin shouts 'THE MASTERMIND RETURNS.' from every harbour. Small Fry have started saluting him and a few bigger ships are listening.",
-    "Bounty raised to 5,500,000 AURA 'for a plan he never made'. Bounti HQ says ignoring him only makes him shrink and slip away, so this time the hunters go loud: hit the target and the net closes mid-shout; miss it and the rumour comes true."
+    "Bounty raised to 5,500,000 AURA 'for a plan he never made'. Bounti HQ says ignoring him only makes him shrink and slip away, so this time the hunters go loud: hit the target and the net closes mid-shout; miss it and the rumour comes true.",
+    "Verdict on drop 5: ESCAPED again (0 of 25 likes). Two escapes, two posters missed; the whole sea now calls him the Mastermind.",
+    "Drop 7 (Morwenna's story): Morwenna Salt offered him a cabin on her ship, a mirror on every wall and his name in lights, in exchange for his voice. He said yes before she finished the sentence. Her invites now go out through his Echo Coin: one 'You've been selected' becomes ten thousand in every harbour at once."
    ]
   },
   "silas-kroft": {
-   "status": "escaped",
-   "bounty": 16000000,
-   "appearances": 1,
+   "status": "wanted",
+   "bounty": 28000000,
+   "appearances": 2,
    "lore_so_far": [
     "Drop 2 (reveal): for three years he ran the friendliest earning circle on the Open Sea, answered every question, welcomed every new hunter by name, and politely collected a small 'membership fee' from each. Nobody asked where the fees went.",
     "One morning the circle woke up to nothing: no messages, no records, no admin. His Vanish Coin makes anything he wants gone disappear, and he made all of it vanish, himself included.",
     "Last seen pushing his glasses up with one long nail, saying 'Right on schedule.' He cannot stand a plan that goes off script.",
-    "Drop 5 (Barnaby's story): his escape is told as 'the Butler vanished'."
+    "Drop 5 (Barnaby's story): his escape is told as 'the Butler vanished'.",
+    "Drop 6 (return): he surfaced as the admin of a brand new earning circle under a new name: warm welcomes, quick answers, a kind word for every new hunter, and a small polite 'membership fee' ('only a small one, for now').",
+    "An old member of his first circle recognised the long nail pushing up the glasses before every reply and posted a warning. By morning the post, her name in the circle's records and every message she had ever sent were gone (Vanish Coin: 'he makes you never have been there').",
+    "Rumour: the new circle runs on a date. Three days after drop 6 (around 2026-11-28) it is meant to wake up to nothing, exactly like the last one; he calls it 'right on schedule'. Hit the target before the date and the schedule breaks; miss it and another circle disappears. Bounty 28,000,000 AURA."
    ]
   },
   "morwenna-salt": {
-   "status": "escaped",
-   "bounty": 5000000,
-   "appearances": 1,
+   "status": "wanted",
+   "bounty": 9000000,
+   "appearances": 2,
    "lore_so_far": [
     "Drop 3 (reveal): her empire is a glittering ship with a thousand doors, out past the busy harbours. Every door is an invitation: free gifts, secret drops, 'You've been selected.' Hunters who step through never come back; their crews just stop hearing from them.",
     "Her Lure Coin makes anything she sends look irresistible. Last week a whole crew followed one shiny invite to 'claim their spot'; nobody has seen them since, and the spots were never real.",
     "Rumoured backstory: once the plainest girl on her island, laughed out of every room. She bit the coin so no one would ever look past her again. Her weakness is being ignored.",
-    "Verdict: ESCAPED (0 of 30 likes). Drop 5 (Barnaby's story): 'The Lure sailed off.'"
+    "Verdict: ESCAPED (0 of 30 likes). Drop 5 (Barnaby's story): 'The Lure sailed off.'",
+    "Drop 7 (return): she does not believe Barnaby is a mastermind; she just wanted his voice. She recruited him with a cabin on her ship, a mirror on every wall and his name in lights. Every glittering invite from her ship now goes out through his Echo Coin, ten thousand times, in every harbour at once. The docks are full of hunters holding golden tickets to doors that lead nowhere.",
+    "Their pairing doubles the weakness: hers is being ignored, his is silence. Hit the target and the shouting turns on her; miss it and the invites never stop. Bounty 9,000,000 AURA."
    ]
   },
   "roderick-krieger": {
